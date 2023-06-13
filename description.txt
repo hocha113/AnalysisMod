@@ -1,0 +1,9 @@
+﻿这是一个新的中文解析模组，适配于2023.6.8.0 Preview版本，是中文版本的ExmapleMod，仅供于模组制作者参考学习之用，请在模组界面提取源文件获得源码
+其中源码主要修改于原官方ExmapleMod，该模组已经适配最新测试版本，源码请前往：https://github.com/tModLoader/tModLoader/tree/1.4.4/AnalysisMod获取
+
+This is a new Chinese parsing mod, compatible with the 2023.6.8.0 Preview version and based on the Chinese version of AnalysisMod. 
+It is only intended for reference and learning purposes by mod makers. 
+Please extract the source code from the mod interface to obtain it.
+The source code has been mainly modified from the original official AnalysisMod, 
+and this module has already been adapted to the latest testing version. For source code, 
+please visit: https://github.com/tModLoader/tModLoader/tree/1.4.4/AnalysisMod

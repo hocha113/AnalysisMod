@@ -1,0 +1,7 @@
+displayName = AnalysisMod
+author = HoCha113
+version = 1.0
+hideCode = false
+hideResources = false
+includeSource = true
+buildIgnore = *.csproj, *.user, obj*, bin*, .vs*, Old*

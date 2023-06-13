@@ -1,0 +1,89 @@
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using System;
+using System.IO;
+using Terraria;
+using Terraria.DataStructures;
+using Terraria.GameContent;
+using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace AnalysisMod.AnalysisContent.Projectiles
+{
+    public class AnalysisBobber : ModProjectile
+    {
+        public static readonly Color[] PossibleLineColors = new Color[] {
+            new Color(255, 215, 0), // A gold color
+			new Color(0, 191, 255) // A blue color
+		};
+
+        // This holds the index of the fishing line color in the PossibleLineColors array.
+        // 这个变量保存了钓线颜色在PossibleLineColors数组中的索引。
+        private int fishingLineColorIndex;
+
+        private Color FishingLineColor => PossibleLineColors[fishingLineColorIndex];
+
+        public override void SetDefaults()
+        {
+            // These are copied through the CloneDefaults method
+            // 这些变量通过CloneDefaults方法进行复制
+
+            // Projectile.width = 14;
+            // Projectile.height = 14;
+            // Projectile.aiStyle = 61;
+            // Projectile.bobber = true;
+            // Projectile.penetrate = -1;
+            // Projectile.netImportant = true;
+            Projectile.CloneDefaults(ProjectileID.BobberWooden);
+
+            DrawOriginOffsetY = -8; // Adjusts the draw position
+                                    // 调整绘制位置
+        }
+
+        public override void OnSpawn(IEntitySource source)
+        {
+            // Decide color of the pole by getting the index of a random entry from the PossibleLineColors array.
+            // 从PossibleLineColors数组中随机获取一个颜色作为鱼竿的颜色
+            fishingLineColorIndex = (byte)Main.rand.Next(PossibleLineColors.Length);
+        }
+
+        // What if we want to randomize the line color
+        // 如果我们想要随机化钓线的颜色怎么办？
+        public override void AI()
+        {
+            // Always ensure that graphics-related code doesn't run on dedicated servers via this check.
+            // 确保图形相关代码不会在专用服务器上运行，通过这个检查来实现。
+            if (!Main.dedServ)
+            {
+                // Create some light based on the color of the line.
+                // 根据钓线的颜色创建一些光源。
+                Lighting.AddLight(Projectile.Center, FishingLineColor.ToVector3());
+            }
+        }
+
+        public override void ModifyFishingLine(ref Vector2 lineOriginOffset, ref Color lineColor)
+        {
+            // Change these two values in order to change the origin of where the line is being drawn.
+            // This will make it draw 47 pixels right and 31 pixels up from the player's center, while they are looking right and in normal gravity.
+
+            // 更改这两个值以更改绘制线条时的起点。
+            // 当玩家向右看并处于正常重力状态时，它将从玩家中心向右47像素、向上31像素绘制。
+            lineOriginOffset = new Vector2(47, -31);
+            // Sets the fishing line's color. Note that this will be overridden by the colored string accessories.
+            // 设置钓线的颜色。请注意，这将被彩色字符串配件覆盖。
+            lineColor = FishingLineColor;
+        }
+
+        // These last two methods are required so the line color is properly synced in multiplayer.
+        // 最后两种方法是必需的，以便在线性同步多人游戏中正确地同步钓线颜色。
+        public override void SendExtraAI(BinaryWriter writer)
+        {
+            writer.Write((byte)fishingLineColorIndex);
+        }
+
+        public override void ReceiveExtraAI(BinaryReader reader)
+        {
+            fishingLineColorIndex = reader.ReadByte();
+        }
+    }
+}

@@ -1,0 +1,1379 @@
+# This file will automatically update with entries for new Content after a build and reload
+
+Items: {
+	AnalysisSword: {
+		DisplayName: Analysis Sword
+		Tooltip: ""
+	}
+
+	AnalysisHealingPotion: {
+		RestoreLifeText: Mods.AnalysisMod.Items.AnalysisHealingPotion.RestoreLifeText
+		DisplayName: Analysis Healing Potion
+		Tooltip: ""
+	}
+
+	AnalysisOnBuyItem: {
+		DeathMessage: Mods.AnalysisMod.Items.AnalysisOnBuyItem.DeathMessage
+		DisplayName: Analysis On Buy Item
+		Tooltip: ""
+	}
+
+	AbsorbTeamDamageAccessory: {
+		DisplayName: Absorb Team Damage Accessory
+		Tooltip: ""
+	}
+
+	AnalysisBeard: {
+		DisplayName: Analysis Beard
+		Tooltip: ""
+	}
+
+	AnalysisImmunityAccessory: {
+		DisplayName: Analysis Immunity Accessory
+		Tooltip: ""
+	}
+
+	AnalysisInfoAccessory: {
+		DisplayName: Analysis Info Accessory
+		Tooltip: ""
+	}
+
+	AnalysisResourceAccessory: {
+		DisplayName: Analysis Resource Accessory
+		Tooltip: ""
+	}
+
+	AnalysisShield: {
+		DisplayName: Analysis Shield
+		Tooltip: ""
+	}
+
+	AnalysisStatBonusAccessory: {
+		DisplayName: Analysis Stat Bonus Accessory
+		Tooltip: ""
+	}
+
+	WaspNest: {
+		DisplayName: Wasp Nest
+		Tooltip: ""
+	}
+
+	ActiveSoundShowcase: {
+		DisplayName: Active Sound Showcase
+		Tooltip: ""
+	}
+
+	AnalysisBullet: {
+		DisplayName: Analysis Bullet
+		Tooltip: ""
+	}
+
+	AnalysisCustomAmmo: {
+		DisplayName: Analysis Custom Ammo
+		Tooltip: ""
+	}
+
+	AnalysisSolutionItem: {
+		DisplayName: Analysis Solution Item
+		Tooltip: ""
+	}
+
+	AnalysisDataItem: {
+		DisplayName: Analysis Data Item
+		Tooltip: ""
+	}
+
+	AnalysisDye: {
+		DisplayName: Analysis Dye
+		Tooltip: ""
+	}
+
+	AnalysisGolfBall: {
+		DisplayName: Analysis Golf Ball
+		Tooltip: ""
+	}
+
+	AnalysisHairDye: {
+		DisplayName: Analysis Hair Dye
+		Tooltip: ""
+	}
+
+	AnalysisInstancedItem: {
+		DisplayName: Analysis Instanced Item
+		Tooltip: ""
+	}
+
+	AnalysisItem: {
+		DisplayName: Analysis Item
+		Tooltip: ""
+	}
+
+	AnalysisMountItem: {
+		DisplayName: Analysis Mount Item
+		Tooltip: ""
+	}
+
+	AnalysisPaperAirplane: {
+		DisplayName: Analysis Paper Airplane
+		Tooltip: ""
+	}
+
+	AnalysisQuestFish: {
+		DisplayName: Analysis Quest Fish
+		Tooltip: ""
+	}
+
+	AnalysisResearchPresent: {
+		DisplayName: Analysis Research Present
+		Tooltip: ""
+	}
+
+	AnalysisSoul: {
+		DisplayName: Analysis Soul
+		Tooltip: ""
+	}
+
+	AnalysisStackableDurabilityItem: {
+		DisplayName: Analysis Stackable Durability Item
+		Tooltip: ""
+	}
+
+	AnalysisTooltipsItem: {
+		DisplayName: Analysis Tooltips Item
+		Tooltip: ""
+	}
+
+	AnalysisBreastplate: {
+		DisplayName: Analysis Breastplate
+		Tooltip: ""
+	}
+
+	AnalysisCostume: {
+		DisplayName: Analysis Costume
+		Tooltip: ""
+	}
+
+	AnalysisHelmet: {
+		DisplayName: Analysis Helmet
+		Tooltip: ""
+	}
+
+	AnalysisHood: {
+		DisplayName: Analysis Hood
+		Tooltip: ""
+	}
+
+	AnalysisLeggings: {
+		DisplayName: Analysis Leggings
+		Tooltip: ""
+	}
+
+	AnalysisRobe: {
+		DisplayName: Analysis Robe
+		Tooltip: ""
+	}
+
+	MinionBossMask: {
+		DisplayName: Minion Boss Mask
+		Tooltip: ""
+	}
+
+	AnalysisBuffPotion: {
+		DisplayName: Analysis Buff Potion
+		Tooltip: ""
+	}
+
+	AnalysisCanStackItem: {
+		DisplayName: Analysis Can Stack Item
+		Tooltip: ""
+	}
+
+	AnalysisCratePotion: {
+		DisplayName: Analysis Crate Potion
+		Tooltip: ""
+	}
+
+	AnalysisFishingCrate: {
+		DisplayName: Analysis Fishing Crate
+		Tooltip: ""
+	}
+
+	AnalysisFoodItem: {
+		DisplayName: Analysis Food Item
+		Tooltip: ""
+	}
+
+	AnalysisLifeFruit: {
+		DisplayName: Analysis Life Fruit
+		Tooltip: ""
+	}
+
+	AnalysisManaCrystal: {
+		DisplayName: Analysis Mana Crystal
+		Tooltip: ""
+	}
+
+	AnalysisMultiUseItem: {
+		DisplayName: Analysis Multi Use Item
+		Tooltip: ""
+	}
+
+	MinionBossBag: {
+		DisplayName: Minion Boss Bag
+		Tooltip: ""
+	}
+
+	MinionBossSummonItem: {
+		DisplayName: Minion Boss Summon Item
+		Tooltip: ""
+	}
+
+	PlanteraItem: {
+		DisplayName: Plantera Item
+		Tooltip: ""
+	}
+
+	HoldStyleShowcase: {
+		DisplayName: Hold Style Showcase
+		Tooltip: ""
+	}
+
+	AnalysisBar: {
+		DisplayName: Analysis Bar
+		Tooltip: ""
+	}
+
+	AnalysisBlock: {
+		DisplayName: Analysis Block
+		Tooltip: ""
+	}
+
+	AnalysisCampfire: {
+		DisplayName: Analysis Campfire
+		Tooltip: ""
+	}
+
+	AnalysisHerbSeeds: {
+		DisplayName: Analysis Herb Seeds
+		Tooltip: ""
+	}
+
+	AnalysisLamp.DisplayName: Analysis Lamp
+
+	AnalysisMusicBox: {
+		DisplayName: Analysis Music Box
+		Tooltip: ""
+	}
+
+	AnalysisOre: {
+		DisplayName: Analysis Ore
+		Tooltip: ""
+	}
+
+	AnalysisPylonItem: {
+		DisplayName: Analysis Pylon Item
+		Tooltip: ""
+	}
+
+	AnalysisPylonItemAdvanced: {
+		DisplayName: Analysis Pylon Item Advanced
+		Tooltip: ""
+	}
+
+	AnalysisSlopedTile: {
+		DisplayName: Analysis Sloped Tile
+		Tooltip: ""
+	}
+
+	AnalysisTorch: {
+		DisplayName: Analysis Torch
+		Tooltip: ""
+	}
+
+	AnalysisTrapIchorBullet: {
+		DisplayName: Analysis Trap Ichor Bullet
+		Tooltip: ""
+	}
+
+	AnalysisTrapChlorophyteBullet: {
+		DisplayName: Analysis Trap Chlorophyte Bullet
+		Tooltip: ""
+	}
+
+	AnalysisWall: {
+		DisplayName: Analysis Wall
+		Tooltip: ""
+	}
+
+	AnalysisWallAdvanced: {
+		DisplayName: Analysis Wall Advanced
+		Tooltip: ""
+	}
+
+	AnalysisWaterTorch: {
+		DisplayName: Analysis Water Torch
+		Tooltip: ""
+	}
+
+	AnalysisBed: {
+		DisplayName: Analysis Bed
+		Tooltip: ""
+	}
+
+	AnalysisChair: {
+		DisplayName: Analysis Chair
+		Tooltip: ""
+	}
+
+	AnalysisChest: {
+		DisplayName: Analysis Chest
+		Tooltip: ""
+	}
+
+	AnalysisChestKey: {
+		DisplayName: Analysis Chest Key
+		Tooltip: ""
+	}
+
+	AnalysisClock: {
+		DisplayName: Analysis Clock
+		Tooltip: ""
+	}
+
+	AnalysisDoor: {
+		DisplayName: Analysis Door
+		Tooltip: ""
+	}
+
+	AnalysisDresser: {
+		DisplayName: Analysis Dresser
+		Tooltip: ""
+	}
+
+	AnalysisPlatform: {
+		DisplayName: Analysis Platform
+		Tooltip: ""
+	}
+
+	AnalysisSink: {
+		DisplayName: Analysis Sink
+		Tooltip: ""
+	}
+
+	AnalysisTable: {
+		DisplayName: Analysis Table
+		Tooltip: ""
+	}
+
+	AnalysisToilet: {
+		DisplayName: Analysis Toilet
+		Tooltip: ""
+	}
+
+	AnalysisWorkbench: {
+		DisplayName: Analysis Workbench
+		Tooltip: ""
+	}
+
+	MinionBossRelic: {
+		DisplayName: Minion Boss Relic
+		Tooltip: ""
+	}
+
+	MinionBossTrophy: {
+		DisplayName: Minion Boss Trophy
+		Tooltip: ""
+	}
+
+	ShimmerShowcaseConditions: {
+		DisplayName: Shimmer Showcase Conditions
+		Tooltip: ""
+	}
+
+	ShimmerShowcaseCustomShimmerResult: {
+		DisplayName: Shimmer Showcase Custom Shimmer Result
+		Tooltip: ""
+	}
+
+	AnalysisBugNet: {
+		DisplayName: Analysis Bug Net
+		Tooltip: ""
+	}
+
+	AnalysisDrill: {
+		DisplayName: Analysis Drill
+		Tooltip: ""
+	}
+
+	AnalysisFishingRod: {
+		DisplayName: Analysis Fishing Rod
+		Tooltip: ""
+	}
+
+	AnalysisHamaxe: {
+		DisplayName: Analysis Hamaxe
+		Tooltip: ""
+	}
+
+	AnalysisHookItem: {
+		DisplayName: Analysis Hook Item
+		Tooltip: ""
+	}
+
+	AnalysisMagicMirror: {
+		DisplayName: Analysis Magic Mirror
+		Tooltip: ""
+	}
+
+	AnalysisPickaxe: {
+		DisplayName: Analysis Pickaxe
+		Tooltip: ""
+	}
+
+	UseStyleShowcase: {
+		DisplayName: Use Style Showcase
+		Tooltip: ""
+	}
+
+	AnalysisAdvancedFlail: {
+		DisplayName: Analysis Advanced Flail
+		Tooltip: ""
+	}
+
+	AnalysisCloneWeapon: {
+		DisplayName: Analysis Clone Weapon
+		Tooltip: ""
+	}
+
+	AnalysisCustomAmmoGun: {
+		DisplayName: Analysis Custom Ammo Gun
+		Tooltip: ""
+	}
+
+	AnalysisCustomDamageWeapon: {
+		DisplayName: Analysis Custom Damage Weapon
+		Tooltip: ""
+	}
+
+	AnalysisCustomResourceWeapon: {
+		DisplayName: Analysis Custom Resource Weapon
+		Tooltip: ""
+	}
+
+	AnalysisCustomSwingSword: {
+		DisplayName: Analysis Custom Swing Sword
+		Tooltip: ""
+	}
+
+	AnalysisExplosive: {
+		DisplayName: Analysis Explosive
+		Tooltip: ""
+	}
+
+	AnalysisFlail: {
+		DisplayName: Analysis Flail
+		Tooltip: ""
+	}
+
+	AnalysisGun: {
+		DisplayName: Analysis Gun
+		Tooltip: ""
+	}
+
+	AnalysisJavelin: {
+		DisplayName: Analysis Javelin
+		Tooltip: ""
+	}
+
+	AnalysisJoustingLance: {
+		DisplayName: Analysis Jousting Lance
+		Tooltip: ""
+	}
+
+	AnalysisMagicWeapon: {
+		DisplayName: Analysis Magic Weapon
+		Tooltip: ""
+	}
+
+	AnalysisMinigun: {
+		DisplayName: Analysis Minigun
+		Tooltip: ""
+	}
+
+	AnalysisModifiedProjectilesItem: {
+		DisplayName: Analysis Modified Projectiles Item
+		Tooltip: ""
+	}
+
+	AnalysisShootingSword: {
+		DisplayName: Analysis Shooting Sword
+		Tooltip: ""
+	}
+
+	AnalysisShortsword: {
+		DisplayName: Analysis Shortsword
+		Tooltip: ""
+	}
+
+	AnalysisShotgun: {
+		DisplayName: Analysis Shotgun
+		Tooltip: ""
+	}
+
+	AnalysisSpear: {
+		DisplayName: Analysis Spear
+		Tooltip: ""
+	}
+
+	AnalysisSpecificAmmoGun: {
+		DisplayName: Analysis Specific Ammo Gun
+		Tooltip: ""
+	}
+
+	AnalysisWhip: {
+		DisplayName: Analysis Whip
+		Tooltip: ""
+	}
+
+	AnalysisWhipAdvanced: {
+		DisplayName: Analysis Whip Advanced
+		Tooltip: ""
+	}
+
+	AnalysisYoyo: {
+		DisplayName: Analysis Yoyo
+		Tooltip: ""
+	}
+
+	HitModifiersShowcase: {
+		DisplayName: Hit Modifiers Showcase
+		Tooltip: ""
+	}
+
+	AnalysisLightPetItem: {
+		DisplayName: Analysis Light Pet Item
+		Tooltip: ""
+	}
+
+	AnalysisPetItem: {
+		DisplayName: Analysis Pet Item
+		Tooltip: ""
+	}
+
+	MinionBossPetItem: {
+		DisplayName: Minion Boss Pet Item
+		Tooltip: ""
+	}
+
+	AnalysisAdvancedAnimatedProjectileItem: {
+		DisplayName: Analysis Advanced Animated Projectile Item
+		Tooltip: ""
+	}
+
+	AnalysisPiercingProjectileItem: {
+		DisplayName: Analysis Piercing Projectile Item
+		Tooltip: ""
+	}
+
+	AnalysisSimpleMinionItem: {
+		DisplayName: Analysis Simple Minion Item
+		Tooltip: ""
+	}
+
+	AnalysisAnimatedGlowmaskTileItem: {
+		DisplayName: Analysis Animated Glowmask Tile Item
+		Tooltip: ""
+	}
+
+	AnalysisAnimatedTileItem: {
+		DisplayName: Analysis Animated Tile Item
+		Tooltip: ""
+	}
+
+	AnalysisWings: {
+		Tooltip: ""
+		DisplayName: Analysis Wings
+	}
+}
+
+AnalysisGlobalBuff.RemainingTime: Mods.AnalysisMod.AnalysisGlobalBuff.RemainingTime
+
+Configs: {
+	AnalysisModConfig: {
+		DisplayName: Analysis Mod Config
+		Headers.Items: Items Header
+
+		AnalysisWingsToggle: {
+			Label: Analysis Wings Toggle
+			Tooltip: ""
+		}
+
+		WeaponWithGrowingDamageToggle: {
+			Label: Weapon With Growing Damage Toggle
+			Tooltip: ""
+		}
+	}
+
+	ModConfigShowcaseAccessibility: {
+		DisplayName: Mod Config Showcase Accessibility
+
+		Public: {
+			Label: Public
+			Tooltip: ""
+		}
+
+		pair: {
+			Label: pair
+			Tooltip: ""
+		}
+
+		Getter: {
+			Label: Getter
+			Tooltip: ""
+		}
+
+		AutoProperty: {
+			Label: Auto Property
+			Tooltip: ""
+		}
+
+		Property: {
+			Label: Property
+			Tooltip: ""
+		}
+
+		IgnoreWithLabelGetter: {
+			Label: Ignore With Label Getter
+			Tooltip: ""
+		}
+
+		PresetA: {
+			Label: Preset A
+			Tooltip: ""
+		}
+
+		PresetB: {
+			Label: Preset B
+			Tooltip: ""
+		}
+
+		Data1: {
+			Label: Data1
+			Tooltip: ""
+		}
+
+		Data2: {
+			Label: Data2
+			Tooltip: ""
+		}
+	}
+
+	Pair: {
+		Tooltip: ""
+
+		enabled: {
+			Label: enabled
+			Tooltip: ""
+		}
+
+		boost: {
+			Label: boost
+			Tooltip: ""
+		}
+	}
+
+	ModConfigShowcaseDataTypes: {
+		DisplayName: Mod Config Showcase Data Types
+
+		SomeBool: {
+			Label: Some Bool
+			Tooltip: ""
+		}
+
+		SomeInt: {
+			Label: Some Int
+			Tooltip: ""
+		}
+
+		SomeFloat: {
+			Label: Some Float
+			Tooltip: ""
+		}
+
+		SomeString: {
+			Label: Some String
+			Tooltip: ""
+		}
+
+		SomeEnum: {
+			Label: Some Enum
+			Tooltip: ""
+		}
+
+		SomeByte: {
+			Label: Some Byte
+			Tooltip: ""
+		}
+
+		SomeUInt: {
+			Label: Some U Int
+			Tooltip: ""
+		}
+
+		SomeColor: {
+			Label: Some Color
+			Tooltip: ""
+		}
+
+		SomeVector2: {
+			Label: Some Vector2
+			Tooltip: ""
+		}
+
+		SomePoint: {
+			Label: Some Point
+			Tooltip: ""
+		}
+
+		SomeArray: {
+			Label: Some Array
+			Tooltip: ""
+		}
+
+		SomeList: {
+			Label: Some List
+			Tooltip: ""
+		}
+
+		SomeDictionary: {
+			Label: Some Dictionary
+			Tooltip: ""
+		}
+
+		SomeSet: {
+			Label: Some Set
+			Tooltip: ""
+		}
+
+		SomeClassA: {
+			Label: Some Class A
+			Tooltip: ""
+		}
+
+		itemDefinitionAnalysis: {
+			Label: item Definition Analysis
+			Tooltip: ""
+		}
+
+		npcDefinitionAnalysis: {
+			Label: npc Definition Analysis
+			Tooltip: ""
+		}
+
+		CustomKey: {
+			Label: Custom Key
+			Tooltip: ""
+		}
+	}
+
+	SimpleData: {
+		Tooltip: ""
+
+		Headers: {
+			FirstHeader: First Header Header
+			SecondHeader: Second Header Header
+		}
+
+		boost: {
+			Label: boost
+			Tooltip: ""
+		}
+
+		percent: {
+			Label: percent
+			Tooltip: ""
+		}
+
+		enabled: {
+			Label: enabled
+			Tooltip: ""
+		}
+
+		FavoritePokemon: {
+			Label: Favorite Pokemon
+			Tooltip: ""
+		}
+	}
+
+	ClassUsedAsKey: {
+		Tooltip: ""
+
+		SomeBool: {
+			Label: Some Bool
+			Tooltip: ""
+		}
+
+		SomeNumber: {
+			Label: Some Number
+			Tooltip: ""
+		}
+	}
+
+	ModConfigShowcaseDefaultValues: {
+		DisplayName: Mod Config Showcase Default Values
+
+		SimpleDefaultInt: {
+			Label: Simple Default Int
+			Tooltip: ""
+		}
+
+		SomeColor: {
+			Label: Some Color
+			Tooltip: ""
+		}
+
+		SomeVector2: {
+			Label: Some Vector2
+			Tooltip: ""
+		}
+
+		EnumAnalysis2: {
+			Label: Enum Analysis2
+			Tooltip: ""
+		}
+
+		ArrayOfString: {
+			Label: Array Of String
+			Tooltip: ""
+		}
+
+		FavoritePokemon: {
+			Label: Favorite Pokemon
+			Tooltip: ""
+		}
+
+		ListOfInts: {
+			Label: List Of Ints
+			Tooltip: ""
+		}
+
+		ListOfVector2: {
+			Label: List Of Vector2
+			Tooltip: ""
+		}
+
+		ListOfItemDefinition: {
+			Label: List Of Item Definition
+			Tooltip: ""
+		}
+
+		DictionaryDefaults: {
+			Label: Dictionary Defaults
+			Tooltip: ""
+		}
+
+		DictionaryDefaults2: {
+			Label: Dictionary Defaults2
+			Tooltip: ""
+		}
+
+		EnumAnalysis1: {
+			Label: Enum Analysis1
+			Tooltip: ""
+		}
+	}
+
+	SampleEnum: {
+		Tooltip: ""
+		Weird.Label: Weird
+		Odd.Label: Odd
+		Strange.Label: Strange
+		Peculiar.Label: Peculiar
+	}
+
+	ModConfigShowcaseLabels: {
+		DisplayName: Mod Config Showcase Labels
+
+		SomeFloat: {
+			Label: Some Float
+			Tooltip: ""
+		}
+
+		StringFormatting: {
+			Label: String Formatting
+			Tooltip: ""
+		}
+
+		pairAnalysis: {
+			Label: pair Analysis
+			Tooltip: ""
+		}
+
+		ListOfPair: {
+			Label: List Of Pair
+			Tooltip: ""
+		}
+
+		Headers: {
+			HeaderIdentifier: Header Identifier Header
+			ChatTagAnalysis: Chat Tag Analysis Header
+			HeaderIdentifier_头标识符: Header Identifier_头标识符 Header
+			ChatTagAnalysis_聊天标签分析案例: Chat Tag Analysis_聊天标签分析案例 Header
+		}
+
+		TypicalHeader: {
+			Label: Typical Header
+			Tooltip: ""
+		}
+
+		LocalizedHeader: {
+			Label: Localized Header
+			Tooltip: ""
+		}
+
+		CoolHeader: {
+			Label: Cool Header
+			Tooltip: ""
+		}
+
+		simpleDataAnalysis2: {
+			Label: simple Data Analysis2
+			Tooltip: ""
+		}
+	}
+
+	Common: {
+		LocalizedLabel: Localized Label
+		LocalizedTooltip: ""
+		InterpolatedLabel: Interpolated Text A
+		InterpolatedTooltip: ""
+		LocalizedHeader: Localized Header Header
+	}
+
+	ModConfigShowcaseMisc: {
+		DisplayName: Mod Config Showcase Misc
+
+		gradient: {
+			Label: gradient
+			Tooltip: ""
+		}
+
+		corner: {
+			Label: corner
+			Tooltip: ""
+		}
+
+		hsl: {
+			Label: hsl
+			Tooltip: ""
+		}
+
+		tint: {
+			Label: tint
+			Tooltip: ""
+		}
+
+		StringPairDictionary: {
+			Label: String Pair Dictionary
+			Tooltip: ""
+		}
+
+		JsonItemFloatDictionary: {
+			Label: Json Item Float Dictionary
+			Tooltip: ""
+		}
+
+		itemSet: {
+			Label: item Set
+			Tooltip: ""
+		}
+
+		ListOfPair2: {
+			Label: List Of Pair2
+			Tooltip: ""
+		}
+
+		pairAnalysis2: {
+			Label: pair Analysis2
+			Tooltip: ""
+		}
+
+		collapsedList: {
+			Label: collapsed List
+			Tooltip: ""
+		}
+
+		collapsedListOfCollapsedObjects: {
+			Label: collapsed List Of Collapsed Objects
+			Tooltip: ""
+		}
+
+		simpleDataAnalysis: {
+			Label: simple Data Analysis
+			Tooltip: ""
+		}
+
+		simpleDataAnalysis2: {
+			Label: simple Data Analysis2
+			Tooltip: ""
+		}
+
+		complexData: {
+			Label: complex Data
+			Tooltip: ""
+		}
+
+		ListOfInts: {
+			Label: List Of Ints
+			Tooltip: ""
+		}
+	}
+
+	Gradient: {
+		Tooltip: ""
+
+		start: {
+			Label: start
+			Tooltip: ""
+		}
+
+		end: {
+			Label: end
+			Tooltip: ""
+		}
+	}
+
+	Corner: {
+		Tooltip: ""
+		TopLeft.Label: Top Left
+		TopRight.Label: Top Right
+		BottomLeft.Label: Bottom Left
+		BottomRight.Label: Bottom Right
+	}
+
+	ComplexData: {
+		Tooltip: ""
+
+		ListOfInts: {
+			Label: List Of Ints
+			Tooltip: ""
+		}
+
+		nestedSimple: {
+			Label: nested Simple
+			Tooltip: ""
+		}
+
+		IncrementalFloat: {
+			Label: Incremental Float
+			Tooltip: ""
+		}
+	}
+
+	ModConfigShowcaseRanges: {
+		DisplayName: Mod Config Showcase Ranges
+
+		NormalFloat: {
+			Label: Normal Float
+			Tooltip: ""
+		}
+
+		IncrementalRangedFloat: {
+			Label: Incremental Ranged Float
+			Tooltip: ""
+		}
+
+		IncrementByPoint11: {
+			Label: Increment By Point11
+			Tooltip: ""
+		}
+
+		RangedFloat: {
+			Label: Ranged Float
+			Tooltip: ""
+		}
+
+		NormalInt: {
+			Label: Normal Int
+			Tooltip: ""
+		}
+
+		RangedInteger: {
+			Label: Ranged Integer
+			Tooltip: ""
+		}
+
+		ListOfInts: {
+			Label: List Of Ints
+			Tooltip: ""
+		}
+
+		RangedWithIncrementVector2: {
+			Label: Ranged With Increment Vector2
+			Tooltip: ""
+		}
+	}
+
+	ModConfigShowcaseSubpages: {
+		DisplayName: Mod Config Showcase Subpages
+		Headers.SeparatePageAnalysiss: Separate Page Analysiss Header
+
+		gradient: {
+			Label: gradient
+			Tooltip: ""
+		}
+
+		subConfigAnalysis: {
+			Label: sub Config Analysis
+			Tooltip: ""
+		}
+
+		DictionaryofSubConfigAnalysis: {
+			Label: Dictionaryof Sub Config Analysis
+			Tooltip: ""
+		}
+
+		SeparateListOfPairs: {
+			Label: Separate List Of Pairs
+			Tooltip: ""
+		}
+
+		pair: {
+			Label: pair
+			Tooltip: ""
+		}
+	}
+
+	SubConfigAnalysis: {
+		Tooltip: ""
+
+		boost: {
+			Label: boost
+			Tooltip: ""
+		}
+
+		percent: {
+			Label: percent
+			Tooltip: ""
+		}
+
+		enabled: {
+			Label: enabled
+			Tooltip: ""
+		}
+
+		SubA: {
+			Label: Sub A
+			Tooltip: ""
+		}
+
+		SubB: {
+			Label: Sub B
+			Tooltip: ""
+		}
+	}
+
+	SubSubConfigAnalysis: {
+		Tooltip: ""
+
+		whoa: {
+			Label: whoa
+			Tooltip: ""
+		}
+	}
+}
+
+Keybinds.RandomBuff.DisplayName: Random Buff
+
+Tiles: {
+	AnalysisDresser.MapEntry: Analysis Dresser
+
+	AnalysisChest: {
+		MapEntry1: Mods.AnalysisMod.Tiles.AnalysisChest.MapEntry1
+		MapEntry0: Mods.AnalysisMod.Tiles.AnalysisChest.MapEntry0
+	}
+
+	AnalysisPylonTileAdvanced.MapEntry: Analysis Pylon Tile Advanced
+	AnalysisPylonTile.MapEntry: Analysis Pylon Tile
+	AnalysisOre.MapEntry: Analysis Ore
+	AnalysisMusicBoxTile.MapEntry: Analysis Music Box Tile
+	AnalysisHerb.MapEntry: Analysis Herb
+	AnalysisFishingCrate.MapEntry: Analysis Fishing Crate
+	AnalysisAnimatedTile.MapEntry: Analysis Animated Tile
+}
+
+Biomes: {
+	AnalysisUndergroundBiome: {
+		TownNPCDialogueName: the Analysis Underground Biome
+		DisplayName: Analysis Underground Biome
+	}
+
+	AnalysisSurfaceBiome: {
+		TownNPCDialogueName: the Analysis Surface Biome
+		DisplayName: Analysis Surface Biome
+	}
+}
+
+Buffs: {
+	AbsorbTeamDamageBuff: {
+		DisplayName: Absorb Team Damage Buff
+		Description: Mods.AnalysisMod.Buffs.AbsorbTeamDamageBuff.Description
+	}
+
+	AnalysisCrateBuff: {
+		DisplayName: Analysis Crate Buff
+		Description: Mods.AnalysisMod.Buffs.AnalysisCrateBuff.Description
+	}
+
+	AnalysisDefenseBuff: {
+		DisplayName: Analysis Defense Buff
+		Description: Mods.AnalysisMod.Buffs.AnalysisDefenseBuff.Description
+	}
+
+	AnalysisDefenseDebuff: {
+		DisplayName: Analysis Defense Debuff
+		Description: Mods.AnalysisMod.Buffs.AnalysisDefenseDebuff.Description
+	}
+
+	AnalysisDodgeBuff: {
+		DisplayName: Analysis Dodge Buff
+		Description: Mods.AnalysisMod.Buffs.AnalysisDodgeBuff.Description
+	}
+
+	AnalysisJavelinDebuff: {
+		DisplayName: Analysis Javelin Debuff
+		Description: Mods.AnalysisMod.Buffs.AnalysisJavelinDebuff.Description
+	}
+
+	AnalysisLifeRegenDebuff: {
+		DisplayName: Analysis Life Regen Debuff
+		Description: Mods.AnalysisMod.Buffs.AnalysisLifeRegenDebuff.Description
+	}
+
+	AnalysisMountBuff: {
+		DisplayName: Analysis Mount Buff
+		Description: Mods.AnalysisMod.Buffs.AnalysisMountBuff.Description
+	}
+
+	AnalysisWhipAdvancedDebuff: {
+		DisplayName: Analysis Whip Advanced Debuff
+		Description: Mods.AnalysisMod.Buffs.AnalysisWhipAdvancedDebuff.Description
+	}
+
+	AnalysisWhipDebuff: {
+		DisplayName: Analysis Whip Debuff
+		Description: Mods.AnalysisMod.Buffs.AnalysisWhipDebuff.Description
+	}
+
+	AnimatedBuff: {
+		DisplayName: Animated Buff
+		Description: Mods.AnalysisMod.Buffs.AnimatedBuff.Description
+	}
+
+	Blocky: {
+		DisplayName: Blocky
+		Description: Mods.AnalysisMod.Buffs.Blocky.Description
+	}
+
+	AnalysisLightPetBuff: {
+		DisplayName: Analysis Light Pet Buff
+		Description: Mods.AnalysisMod.Buffs.AnalysisLightPetBuff.Description
+	}
+
+	AnalysisPetBuff: {
+		DisplayName: Analysis Pet Buff
+		Description: Mods.AnalysisMod.Buffs.AnalysisPetBuff.Description
+	}
+
+	MinionBossPetBuff: {
+		DisplayName: Minion Boss Pet Buff
+		Description: Mods.AnalysisMod.Buffs.MinionBossPetBuff.Description
+	}
+
+	AnalysisSimpleMinionBuff: {
+		DisplayName: Analysis Simple Minion Buff
+		Description: Mods.AnalysisMod.Buffs.AnalysisSimpleMinionBuff.Description
+	}
+}
+
+NPCs: {
+	AnalysisBoneMerchant.DisplayName: Analysis Bone Merchant
+	AnalysisCustomAISlimeNPC.DisplayName: Analysis Custom A I Slime N P C
+	AnalysisDrawBehindNPC.DisplayName: Analysis Draw Behind N P C
+
+	AnalysisPerson: {
+		DisplayName: Analysis Person
+
+		TownNPCMood: {
+			Content: 我很满足。
+			NoHome: 我讨厌没有家。
+			FarFromHome: 我离家太远了。
+			LoveSpace: 我非常喜欢有这么大的空间。
+			DislikeCrowded: 我不喜欢这么拥挤。
+			HateCrowded: 我讨厌这么拥挤。
+			LoveBiome: 我非常喜欢{BiomeName}。
+			LikeBiome: 我喜欢{BiomeName}。
+			DislikeBiome: 我不喜欢{BiomeName}。
+			LoveNPC: 我非常喜欢{NPCName}。
+			LikeNPC: 我喜欢{NPCName}。
+			DislikeNPC: 我不喜欢{NPCName}。
+			HateNPC: 我讨厌{NPCName}。
+			LikeNPC_Princess: I like {NPCName}.
+			Princess_LovesNPC: I like {NPCName}.
+		}
+	}
+
+	AnalysisTravelingMerchant.DisplayName: Analysis Traveling Merchant
+	AnalysisWormBody.DisplayName: Analysis Worm Body
+	AnalysisWormHead.DisplayName: Analysis Worm Head
+	AnalysisWormTail.DisplayName: Analysis Worm Tail
+	AnalysisZombieThief.DisplayName: Analysis Zombie Thief
+	MinionBossBody.DisplayName: Minion Boss Body
+	MinionBossMinion.DisplayName: Minion Boss Minion
+	PartyZombie.DisplayName: Party Zombie
+}
+
+Projectiles: {
+	AnalysisSolutionProjectile.DisplayName: Analysis Solution Projectile
+	AnalysisHookProjectile.DisplayName: Analysis Hook Projectile
+	AnalysisLightPetProjectile.DisplayName: Analysis Light Pet Projectile
+	AnalysisPetProjectile.DisplayName: Analysis Pet Projectile
+	MinionBossPetProjectile.DisplayName: Minion Boss Pet Projectile
+	ActiveSoundShowcaseProjectile.DisplayName: Active Sound Showcase Projectile
+	AnalysisAdvancedAnimatedProjectile.DisplayName: Analysis Advanced Animated Projectile
+	AnalysisAdvancedFlailProjectile.DisplayName: Analysis Advanced Flail Projectile
+	AnalysisBobber.DisplayName: Analysis Bobber
+	AnalysisBullet.DisplayName: Analysis Bullet
+	AnalysisCloneProjectile.DisplayName: Analysis Clone Projectile
+	AnalysisCustomSwingProjectile.DisplayName: Analysis Custom Swing Projectile
+	AnalysisDrillProjectile.DisplayName: Analysis Drill Projectile
+	AnalysisExplosive.DisplayName: Analysis Explosive
+	AnalysisFlailProjectile.DisplayName: Analysis Flail Projectile
+	AnalysisGolfBallProjectile.DisplayName: Analysis Golf Ball Projectile
+	AnalysisHomingProjectile.DisplayName: Analysis Homing Projectile
+	AnalysisInstancedProjectile.DisplayName: Analysis Instanced Projectile
+	AnalysisJavelinProjectile.DisplayName: Analysis Javelin Projectile
+	AnalysisJoustingLanceProjectile.DisplayName: Analysis Jousting Lance Projectile
+	AnalysisMinionBossEye.DisplayName: Analysis Minion Boss Eye
+	AnalysisPaperAirplaneProjectile.DisplayName: Analysis Paper Airplane Projectile
+	AnalysisPiercingProjectile.DisplayName: Analysis Piercing Projectile
+	AnalysisShortswordProjectile.DisplayName: Analysis Shortsword Projectile
+	AnalysisSparklingBall.DisplayName: Analysis Sparkling Ball
+	AnalysisSpearProjectile.DisplayName: Analysis Spear Projectile
+	AnalysisWhipProjectile.DisplayName: Analysis Whip Projectile
+	AnalysisWhipProjectileAdvanced.DisplayName: Analysis Whip Projectile Advanced
+	AnalysisYoyoProjectile.DisplayName: Analysis Yoyo Projectile
+	AnalysisSimpleMinion.DisplayName: Analysis Simple Minion
+}
+
+DropConditions: {
+	AnalysisSoul: Mods.AnalysisMod.DropConditions.AnalysisSoul
+	JourneyMode: Mods.AnalysisMod.DropConditions.JourneyMode
+	Analysis: Mods.AnalysisMod.DropConditions.Analysis
+}
+
+Conditions: {
+	PlayerHasLifeforceBuff: Mods.AnalysisMod.Conditions.PlayerHasLifeforceBuff
+	InAnalysisBiome: Mods.AnalysisMod.Conditions.InAnalysisBiome
+	NotSellingAnalysisItem: Mods.AnalysisMod.Conditions.NotSellingAnalysisItem
+}
