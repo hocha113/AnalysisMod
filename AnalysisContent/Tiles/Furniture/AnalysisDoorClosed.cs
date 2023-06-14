@@ -13,6 +13,7 @@ using Terraria.ObjectData;
 namespace AnalysisMod.AnalysisContent.Tiles.Furniture
 {
     //TODO: Smart Cursor Outlines and tModLoader support
+    //待完成：智能光标轮廓和tModLoader支持
     public class AnalysisDoorClosed : ModTile
     {
         public override void SetStaticDefaults()
@@ -39,6 +40,7 @@ namespace AnalysisMod.AnalysisContent.Tiles.Furniture
 
             // Placement
             // In addition to copying from the TileObjectData.Something templates, modders can copy from specific tile types. CopyFrom won't copy subtile data, so style specific properties won't be copied, such as how Obsidian doors are immune to lava.
+            //除了从TileObjectData.Something模板复制外，modders还可以从特定的瓷砖类型中复制。CopyFrom不会复制子图块数据，因此不会复制特定于样式的属性，例如黑曜石门对岩浆免疫的方式。
             TileObjectData.newTile.CopyFrom(TileObjectData.GetTileData(TileID.ClosedDoor, 0));
             /* This is what is copied from the ClosedDoor tile
 			TileObjectData.newTile.Width = 1;
@@ -54,6 +56,7 @@ namespace AnalysisMod.AnalysisContent.Tiles.Furniture
 			TileObjectData.newTile.StyleHorizontal = false;
 			TileObjectData.newTile.StyleWrapLimit = 36;
 			TileObjectData.newTile.StyleLineSkip = 3; // When a door closes, each tile randomize between 3 different options. StyleLineSkip ensures that those tiles are interpreted as the correct style.
+                                                      // 当门关闭时，每个图块都随机在3个不同选项之间切换。StyleLineSkip确保这些图块被解释为正确的样式。
 			TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
 			TileObjectData.newAlternate.Origin = new Point16(0, 1);
 			TileObjectData.addAlternate(0);

@@ -15,10 +15,14 @@ namespace AnalysisMod.AnalysisCommon.Players
         {
             health = StatModifier.Default;
             health.Base = AnalysisLifeFruits * AnalysisLifeFruit.LifePerFruit;
-            // Alternatively:  health = StatModifier.Default with { Base = AnalysisLifeFruits * AnalysisLifeFruit.LifePerFruit };
+            // Alternatively:
+            // 或者：
+            // health = StatModifier.Default with { Base = AnalysisLifeFruits * AnalysisLifeFruit.LifePerFruit };
             mana = StatModifier.Default;
             mana.Base = AnalysisManaCrystals * AnalysisManaCrystal.ManaPerCrystal;
-            // Alternatively:  mana = StatModifier.Default with { Base = AnalysisManaCrystals * AnalysisManaCrystal.ManaPerCrystal };
+            // Alternatively:
+            // 或者：
+            // mana = StatModifier.Default with { Base = AnalysisManaCrystals * AnalysisManaCrystal.ManaPerCrystal };
         }
 
         public override void SyncPlayer(int toWho, int fromWho, bool newPlayer)
@@ -32,6 +36,7 @@ namespace AnalysisMod.AnalysisCommon.Players
         }
 
         // Called in AnalysisMod.Networking.cs
+        // 在AnalysisMod.Networking.cs中调用
         public void ReceivePlayerSync(BinaryReader reader)
         {
             AnalysisLifeFruits = reader.ReadByte();
@@ -55,6 +60,9 @@ namespace AnalysisMod.AnalysisCommon.Players
 
         // NOTE: The tag instance provided here is always empty by default.
         // Read https://github.com/tModLoader/tModLoader/wiki/Saving-and-loading-using-TagCompound to better understand Saving and Loading data.
+
+        // 注意：此处提供的标签实例默认始终为空。
+        // 阅读https://github.com/tModLoader/tModLoader/wiki/Saving-and-loading-using-TagCompound以更好地理解数据的保存和加载。
         public override void SaveData(TagCompound tag)
         {
             tag["AnalysisLifeFruits"] = AnalysisLifeFruits;

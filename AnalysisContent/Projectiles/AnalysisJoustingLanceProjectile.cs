@@ -279,7 +279,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
         {
 
             // SpriteEffects change which direction the sprite is drawn.
-            // SpriteEffects 更改精灵绘制方向。
+            // SpriteEffects 更改精灵图绘制方向。
             SpriteEffects spriteEffects = SpriteEffects.None;
 
             // Get texture of projectile.
@@ -301,8 +301,8 @@ namespace AnalysisMod.AnalysisContent.Projectiles
             // If the projectile is facing right, we need to rotate it by -90 degrees, move the origin, and flip the sprite horizontally.
             // This will make it so the bottom of the sprite is correctly facing down when shot to the right.
 
-            // 如果弹幕面向右，则需要将其旋转-90度，移动原点并水平翻转精灵。
-            // 这样可以使精灵底部在向右发射时正确朝下。
+            // 如果弹幕面向右，则需要将其旋转-90度，移动原点并水平翻转精灵图。
+            // 这样可以使精灵图底部在向右发射时正确朝下。
             if (Projectile.direction > 0)
             {
                 rotation -= (float)Math.PI / 2f;
@@ -311,7 +311,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
             }
 
             // The position of the sprite. Not subtracting Main.player[Projectile.owner].gfxOffY will cause the sprite to bounce when walking up blocks.
-            // 精灵位置。不减去 Main.player[Projectile.owner].gfxOffY 将导致走上方块时精灵反弹。
+            // 精灵图位置。不减去 Main.player[Projectile.owner].gfxOffY 将导致走上方块时精灵图反弹。
             Vector2 position = new(Projectile.Center.X, Projectile.Center.Y - Main.player[Projectile.owner].gfxOffY);
 
             // Apply lighting and draw our projectile

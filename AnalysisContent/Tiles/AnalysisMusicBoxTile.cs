@@ -9,6 +9,7 @@ using Terraria.ObjectData;
 namespace AnalysisMod.AnalysisContent.Tiles
 {
     // See AnalysisMod/Common/Systems/MusicLoadingSystem for an explanation on music.
+    // 请参阅AnalysisMod/Common/Systems/MusicLoadingSystem以了解音乐的说明。
     public class AnalysisMusicBoxTile : ModTile
     {
         public override void SetStaticDefaults()

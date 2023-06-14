@@ -12,14 +12,14 @@ namespace AnalysisMod.AnalysisContent.Buffs
     // This buff has an extra animation spritesheet, and also showcases PreDraw specifically.
     // (We keep the autoloaded texture as one frame in case other mods need to access the buff sprite directly and aren't aware of it having special draw code).
 
-    // 这个增益效果有一个额外的动画精灵表，并且特别展示了PreDraw。
-    //（我们将自动加载的纹理保留为一帧，以防其他模组需要直接访问增益效果精灵并不知道它具有特殊绘制代码）。
+    // 这个增益效果有一个额外的动画精灵图表，并且特别展示了PreDraw。
+    //（我们将自动加载的纹理保留为一帧，以防其他模组需要直接访问增益效果精灵图并不知道它具有特殊绘制代码）。
     public class AnimatedBuff : ModBuff
     {
         // Some constants we define to make our life easier.
         // 为使我们的生活更轻松而定义的一些常量。
         public static readonly int FrameCount = 4; // Amount of frames we have on our animation spritesheet.
-                                                   // 我们在动画精灵表上拥有的帧数。
+                                                   // 我们在动画精灵图表上拥有的帧数。
 
         public static readonly int AnimationSpeed = 60; // In ticks.
                                                         // 单位：游戏刻。
@@ -56,7 +56,7 @@ namespace AnalysisMod.AnalysisContent.Buffs
             // 在此处使用我们的特殊纹理并进行动画处理。
 
             // Use our animation spritesheet.
-            // 使用我们的动画精灵表。
+            // 使用我们的动画精灵图表。
             Texture2D ourTexture = animatedTexture.Value;
             // Choose the frame to display, here based on constants and the game's tick count.
             // 根据常量和游戏计数器选择要显示的帧。
@@ -75,8 +75,8 @@ namespace AnalysisMod.AnalysisContent.Buffs
             // it handles mouseovering and clicking on the buff icon. Since our frame in the animation is 32x32 (same as the autoloaded sprite),
             // and we don't change drawParams.position, we don't have to do anything. If you offset the position, or have a non-standard size, change it accordingly.
 
-            // 注意drawParams.mouseRectangle存在：它默认为自动加载缓冲区精灵的大小，
-            // 它处理鼠标悬停和单击缓冲区图标。由于我们在动画中的帧是32x32（与自动加载精灵相同），
+            // 注意drawParams.mouseRectangle存在：它默认为自动加载缓冲区精灵图的大小，
+            // 它处理鼠标悬停和单击缓冲区图标。由于我们在动画中的帧是32x32（与自动加载精灵图相同），
             // 并且我们没有更改drawParams.position，因此无需进行任何操作。如果您偏移位置或具有非标准大小，请相应更改它。
 
             // We have two options here:

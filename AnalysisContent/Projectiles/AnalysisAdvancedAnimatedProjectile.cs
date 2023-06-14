@@ -113,12 +113,12 @@ namespace AnalysisMod.AnalysisContent.Projectiles
 
             Projectile.rotation = Projectile.velocity.ToRotation();
             // Since our sprite has an orientation, we need to adjust rotation to compensate for the draw flipping
-            // 由于我们的精灵具有方向性，因此我们需要调整旋转以补偿绘图翻转
+            // 由于我们的精灵图具有方向性，因此我们需要调整旋转以补偿绘图翻转
             if (Projectile.spriteDirection == -1)
             {
                 Projectile.rotation += MathHelper.Pi;
                 // For vertical sprites use MathHelper.PiOver2
-                // 对于垂直精灵，请使用MathHelper.PiOver2
+                // 对于垂直精灵图，请使用MathHelper.PiOver2
             }
         }
 
@@ -191,7 +191,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
             // If image isn't centered or symmetrical you can specify origin of the sprite
             // (0,0) for the upper-left corner
 
-            // 如果图像不居中或对称，则可以指定精灵的原点
+            // 如果图像不居中或对称，则可以指定精灵图的原点
             // 左上角为(0,0)
             float offsetX = 20f;
             origin.X = Projectile.spriteDirection == 1 ? sourceRectangle.Width - offsetX : offsetX;
@@ -199,7 +199,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
             // If sprite is vertical
             // float offsetY = 20f;
 
-            // 如果精灵是垂直的
+            // 如果精灵图是垂直的
             // float offsetY = 20f;
 
             // origin.Y = (float)(Projectile.spriteDirection == 1 ? sourceRectangle.Height - offsetY : offsetY);

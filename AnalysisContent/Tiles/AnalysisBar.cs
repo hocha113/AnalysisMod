@@ -22,6 +22,7 @@ namespace AnalysisMod.AnalysisContent.Tiles
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(200, 200, 200), Language.GetText("MapObject.MetalBar")); // localized text for "Metal Bar"
+                                                                                           // "金属条"的本地化文本
         }
     }
 }

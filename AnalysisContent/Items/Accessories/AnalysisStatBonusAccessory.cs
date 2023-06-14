@@ -1,6 +1,7 @@
 ﻿using AnalysisMod.AnalysisCommon.Players;
 using AnalysisMod.AnalysisContent.DamageClasses;
 using Terraria;
+using Terraria.DataStructures;
 using Terraria.Localization;
 using Terraria.ModLoader;
 
@@ -18,6 +19,11 @@ namespace AnalysisMod.AnalysisContent.Items.Accessories
         public static readonly int MagicArmorPenetration = 5;
         public static readonly int AnalysisKnockback = 100;
         public static readonly int AdditiveCritDamageBonus = 20;
+
+        public override void SetStaticDefaults()
+        {
+            Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(2, 5));
+        }
 
         // Insert the modifier values into the tooltip localization
         // 通过在这里声明，更改值将改变效果和工具提示
@@ -52,7 +58,7 @@ namespace AnalysisMod.AnalysisContent.Items.Accessories
             // 在这种情况下，我们正在做以下几件事：
             // - 添加25%的额外伤害。这是配件通常使用的“X％增加攻击力”的典型方式，请使用此选项。
             // - 添加12% 的额外倍率。Terraria几乎从未使用过该效果,通常希望使用上面提到的附加乘数。 使用多重奖金极难正确平衡游戏
-            //- 添加4个基础伤害。
+            // - 添加4个基础伤害。
             // - 添加5个平坦伤害。
             // 由于我们使用DamageClass.Generic，因此这些奖励适用于玩家造成的所有伤害。
             player.GetDamage(DamageClass.Generic) += AdditiveDamageBonus / 100f;

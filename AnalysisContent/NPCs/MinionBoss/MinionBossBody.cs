@@ -212,7 +212,7 @@ namespace AnalysisMod.AnalysisContent.NPCs.MinionBoss
             // 免疫通过NPCID.Sets.DebuffImmunitySets字典处理
 
             // Custom AI, 0 is "bound town NPC" AI which slows the NPC down and changes sprite orientation towards the target
-            // 自定义AI，0为“绑定城镇NPC” AI，可以减缓NPC速度并将精灵方向朝向目标
+            // 自定义AI，0为“绑定城镇NPC” AI，可以减缓NPC速度并将精灵图方向朝向目标
             NPC.aiStyle = -1;
 
             // Custom boss bar

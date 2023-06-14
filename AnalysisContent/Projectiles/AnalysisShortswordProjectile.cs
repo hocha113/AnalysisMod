@@ -11,7 +11,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
     // Values chosen mostly correspond to Iron Shortword
 
     // 短剑投射物的处理方式与其绘制和伤害对象有关
-    // “命中框”本身更靠近玩家，精灵居中于其中
+    // “命中框”本身更靠近玩家，精灵图居中于其中
     // 但是与世界的交互将发生在该命中框偏移处，更接近剑尖（CutTiles、Colliding）
     // 选择的值大多对应于Iron Shortword
     public class AnalysisShortswordProjectile : ModProjectile
@@ -72,7 +72,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
             else
             {
                 // Important so that the sprite draws "in" the player's hand and not fully infront or behind the player
-                // 非常重要，以便精灵“描绘”在玩家手中，并且不完全出现在玩家前面或后面。
+                // 非常重要，以便精灵图“描绘”在玩家手中，并且不完全出现在玩家前面或后面。
                 player.heldProj = Projectile.whoAmI;
             }
 
@@ -97,18 +97,18 @@ namespace AnalysisMod.AnalysisContent.Projectiles
             Projectile.spriteDirection = (Vector2.Dot(Projectile.velocity, Vector2.UnitX) >= 0f).ToDirectionInt();
 
             // Point towards where it is moving, applied offset for top right of the sprite respecting spriteDirection
-            // 指向其移动方向，并应用偏移以尊重 spriteDirection 的精灵顶部右侧
+            // 指向其移动方向，并应用偏移以尊重 spriteDirection 的精灵图顶部右侧
             Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2 - MathHelper.PiOver4 * Projectile.spriteDirection;
 
             // The code in this method is important to align the sprite with the hitbox how we want it to
-            // 此方法中的代码对于使精灵与命中框按我们想要的方式对齐非常重要
+            // 此方法中的代码对于使精灵图与命中框按我们想要的方式对齐非常重要
             SetVisualOffsets();
         }
 
         private void SetVisualOffsets()
         {
             // 32 is the sprite size (here both width and height equal)
-            // 32是精灵大小（宽度和高度相等）
+            // 32是精灵图大小（宽度和高度相等）
             const int HalfSpriteWidth = 32 / 2;
             const int HalfSpriteHeight = 32 / 2;
 
@@ -116,7 +116,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
             int HalfProjHeight = Projectile.height / 2;
 
             // Vanilla configuration for "hitbox in middle of sprite"
-            //“碰撞框在精灵中间”的原始配置
+            //“碰撞框在精灵图中间”的原始配置
             DrawOriginOffsetX = 0;
             DrawOffsetX = -(HalfSpriteWidth - HalfProjWidth);
             DrawOriginOffsetY = -(HalfSpriteHeight - HalfProjHeight);

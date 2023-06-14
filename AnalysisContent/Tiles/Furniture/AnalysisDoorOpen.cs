@@ -22,6 +22,8 @@ namespace AnalysisMod.AnalysisContent.Tiles.Furniture
             Main.tileLavaDeath[Type] = true;
             Main.tileNoSunLight[Type] = true;
             TileID.Sets.HousingWalls[Type] = true; // needed for non-solid blocks to count as walls
+                                                   // 需要让非实心方块被视为墙壁
+
             TileID.Sets.HasOutlines[Type] = true;
             TileID.Sets.DisableSmartCursor[Type] = true;
             TileID.Sets.CloseDoorID[Type] = ModContent.TileType<AnalysisDoorClosed>();
@@ -31,6 +33,7 @@ namespace AnalysisMod.AnalysisContent.Tiles.Furniture
             DustType = ModContent.DustType<Sparkle>();
             AdjTiles = new int[] { TileID.OpenDoor };
             // Tiles usually drop their corresponding item automatically, but RegisterItemDrop is needed here since the AnalysisDoor item places AnalysisDoorClosed, not this tile.
+            // 瓷砖通常会自动掉落相应的物品，但由于 AnalysisDoor 物品放置的是 AnalysisDoorClosed 而不是这个瓷砖，因此需要使用 RegisterItemDrop。
             RegisterItemDrop(ModContent.ItemType<AnalysisDoor>(), 0);
             TileID.Sets.CloseDoorID[Type] = ModContent.TileType<AnalysisDoorClosed>();
 
@@ -39,8 +42,11 @@ namespace AnalysisMod.AnalysisContent.Tiles.Furniture
 
             // Placement
             // In addition to copying from the TileObjectData.Something templates, modders can copy from specific tile types. CopyFrom won't copy subtile data, so style specific properties won't be copied, such as how Obsidian doors are immune to lava.
+            // 除了从 TileObjectData.Something 模板中复制外，modder 还可以从特定的瓷砖类型中复制。CopyFrom 不会复制子图块数据，因此风格特定属性不会被复制，例如黑曜石门对岩浆免疫。
             TileObjectData.newTile.CopyFrom(TileObjectData.GetTileData(TileID.OpenDoor, 0));
             /* This is what is copied from the OpenDoor tile
+             * 以下内容是从 OpenDoor 瓷砖中复制而来：
+             * 
 			TileObjectData.newTile.Width = 2;
 			TileObjectData.newTile.Height = 3;
 			TileObjectData.newTile.Origin = new Point16(0, 0);

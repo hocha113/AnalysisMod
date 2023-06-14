@@ -28,7 +28,7 @@ namespace AnalysisMod.AnalysisContent.Items.Weapons
     /// </summary>
     public class HitModifiersShowcase : ModItem
     {
-        public override string Texture => "AnalysisMod/AnalysisContent/Items/Weapons/AnalysisSword";
+        public override string Texture => "AnalysisMod/Assets/ItemsVorGet/AdminiumSword_Two";
 
         private const int numberOfModes = 8;
         private int mode = 0;
@@ -222,7 +222,7 @@ namespace AnalysisMod.AnalysisContent.Items.Weapons
                 //AddBuff不是安静的，因为它会影响另一个玩家。这使其能够向所有玩家广播目标具有增益。
                 //（Main.pvpBuff必须设置为true才能让其他玩家给予某个玩家增益）
                 //请注意，在PvP中，您可能会攻击一个玩家并看到他们受到伤害，但当命中消息到达目标客户端时，
-                //他们可能已经重新充电了闪避。在这种情况下，目标实际上不会受到伤害，并且他们的健康状况将显示恢复。
+                //他们可能已经重新充能了闪避。在这种情况下，目标实际上不会受到伤害，并且他们的健康状况将显示恢复。
                 //由于攻击者应用debuff，则无论如何都会对目标造成debuff
                 target.AddBuff(ModContent.BuffType<AnalysisDefenseDebuff>(), 600, quiet: false);
             }

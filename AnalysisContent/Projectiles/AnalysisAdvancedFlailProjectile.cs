@@ -21,7 +21,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
     public class AnalysisAdvancedFlailProjectile : ModProjectile
     {
         private const string ChainTexturePath = "AnalysisMod/AnalysisContent/Projectiles/AnalysisAdvancedFlailProjectileChain"; // The folder path to the flail chain sprite
-                                                                                                                                // 链条精灵文件夹路径
+                                                                                                                                // 链条精灵图文件夹路径
 
         private const string ChainTextureExtraPath = "AnalysisMod/AnalysisContent/Projectiles/AnalysisAdvancedFlailProjectileChainExtra";  // This texture and related code is optional and used for a unique effect
                                                                                                                                            // 这个纹理及相关代码是可选项，用于产生独特效果
@@ -363,7 +363,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
                                                             // 这可以防止玩家在没有视线的情况下试图攻击敌人。旋转时自定义碰撞代码使其成为必要条件。
 
             // This rotation code is unique to this flail, since the sprite isn't rotationally symmetric and has tip.
-            // 这个旋转代码是独特的，因为精灵不具有旋转对称性并且有尖端。
+            // 这个旋转代码是独特的，因为精灵图不具有旋转对称性并且有尖端。
             bool freeRotation = CurrentAIState == AIState.Ricochet || CurrentAIState == AIState.Dropping;
             if (freeRotation)
             {
@@ -578,7 +578,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
             Rectangle? chainSourceRectangle = null;
             // Drippler Crippler customizes sourceRectangle to cycle through sprite frames: sourceRectangle = asset.Frame(1, 6);
 
-            // Drippler Crippler 自定义 sourceRectangle 来循环播放精灵帧：sourceRectangle = asset.Frame(1, 6);
+            // Drippler Crippler 自定义 sourceRectangle 来循环播放精灵图帧：sourceRectangle = asset.Frame(1, 6);
             float chainHeightAdjustment = 0f; // Use this to adjust the chain overlap.
                                               // 使用它来调整链条重叠部分。
 
@@ -608,8 +608,8 @@ namespace AnalysisMod.AnalysisContent.Projectiles
                 // Cycling through frames: sourceRectangle = asset.Frame(1, 6, 0, chainCount % 6);
                 // This Analysis shows how Flaming Mace works. It checks chainCount and changes chainTexture and draw color at different values
 
-                // Flaming Mace 和 Drippler Crippler 在此处使用代码来绘制自定义精灵帧和自定义光照。
-                // 循环播放精灵帧：sourceRectangle = asset.Frame(1, 6, 0, chainCount % 6);
+                // Flaming Mace 和 Drippler Crippler 在此处使用代码来绘制自定义精灵图帧和自定义光照。
+                // 循环播放精灵图帧：sourceRectangle = asset.Frame(1, 6, 0, chainCount % 6);
                 // 此分析展示了 Flaming Mace 的工作原理。它检查 chainCount 并在不同值下更改 chainTexture 和 draw color。
 
                 var chainTextureToDraw = chainTexture;

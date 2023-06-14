@@ -7,7 +7,7 @@ namespace AnalysisMod.Staitd
 {
     public class MyModPlayer : ModPlayer
     {
-        public int ETR;
+        public int ETR=0;
 
         public override void Initialize()
         {

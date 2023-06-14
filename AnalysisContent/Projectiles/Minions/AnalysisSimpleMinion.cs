@@ -148,7 +148,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles.Minions
         public override void SetStaticDefaults()
         {
             // Sets the amount of frames this minion has on its spritesheet
-            // 设置该随从在其精灵表上的帧数
+            // 设置该随从在其精灵图表上的帧数
             Main.projFrames[Projectile.type] = 4;
             // This is necessary for right-click targeting
             // 这对于右键目标是必要的

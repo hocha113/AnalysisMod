@@ -10,7 +10,7 @@ namespace AnalysisMod.AnalysisContent.Dusts
     // This dust shows off custom drawing. By default, the dust sprite is drawn once. This Analysis uses custom drawing to draw a trail,
     // it is an exact clone of DustID.Electric, aside from some code cleanup. One place Terraria uses DustID.Electric is when a player is suffering from BuffID.Electrified.
 
-    // 这个尘埃展示了自定义绘制。默认情况下，尘埃精灵只会被绘制一次。这个分析使用自定义绘制来画出一个轨迹，
+    // 这个尘埃展示了自定义绘制。默认情况下，尘埃精灵图只会被绘制一次。这个分析使用自定义绘制来画出一个轨迹，
     // 它是 DustID.Electric 的完全克隆，除了一些代码清理。Terraria 在玩家受到 BuffID.Electrified 影响时使用 DustID.Electric。
     public class AnalysisCustomDrawDust : ModDust
     {

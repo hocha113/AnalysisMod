@@ -27,9 +27,9 @@ namespace AnalysisMod.AnalysisContent.Projectiles
             // If this is true the projectile won't flip its sprite vertically while doing a loop, but the paper airplane can be upside down if it is shot one direction and then turns around on its own.
             // Set to false if you want the projectile to always be right side up.
 
-            // 将此设置为true将阻止弹丸在改变方向时自动翻转其精灵。
+            // 将此设置为true将阻止弹丸在改变方向时自动翻转其精灵图。
             // 香草纸飞机已将其设置为true。
-            // 如果这是真的，则弹丸不会在执行循环时垂直翻转其精灵，但如果它朝一个方向射击然后自己掉头，则纸飞机可能颠倒。
+            // 如果这是真的，则弹丸不会在执行循环时垂直翻转其精灵图，但如果它朝一个方向射击然后自己掉头，则纸飞机可能颠倒。
             // 如果您希望弹丸始终正面朝上，请将其设置为false。
             Projectile.manualDirectionChange = true;
 
@@ -182,7 +182,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
         public override bool PreDraw(ref Color lightColor)
         {
             // This is where we specify which way to flip the sprite. If the projectile is moving to the left, then flip it vertically.
-            // 这里我们指定翻转精灵的方向。如果弹射物正在向左移动，则垂直翻转它。
+            // 这里我们指定翻转精灵图的方向。如果弹射物正在向左移动，则垂直翻转它。
             SpriteEffects spriteEffects = Projectile.spriteDirection <= 0 ? SpriteEffects.FlipVertically : SpriteEffects.None;
 
             // Getting texture of projectile

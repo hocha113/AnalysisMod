@@ -152,6 +152,7 @@ namespace AnalysisMod.AnalysisContent.Tiles.Furniture
         }
 
         // This is not a hook, this is just a normal method used by the MouseOver and MouseOverFar hooks to avoid repeating code.
+        // 这不是钩子，而只是MouseOver和MouseOverFar钩子用来避免重复代码的普通方法。
         public void MouseOverNearAndFarSharedLogic(Player player, int i, int j)
         {
             Tile tile = Main.tile[i, j];
@@ -171,6 +172,7 @@ namespace AnalysisMod.AnalysisContent.Tiles.Furniture
             else
             {
                 string defaultName = TileLoader.DefaultContainerName(tile.TileType, tile.TileFrameX, tile.TileFrameY); // This gets the ContainerName text for the currently selected language
+                                                                                                                       // 获取当前选定语言的ContainerName文本。
 
                 if (Main.chest[chestIndex].name != "")
                 {

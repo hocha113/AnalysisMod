@@ -11,7 +11,7 @@ namespace AnalysisMod.AnalysisContent.Items
     /// </summary>
     public class UseStyleShowcase : ModItem
     {
-        public override string Texture => "AnalysisMod/AnalysisContent/Items/Weapons/AnalysisSword";
+        public override string Texture => "AnalysisMod/Assets/ItemsVorGet/AdminiumSword";
 
         public override void SetDefaults()
         {

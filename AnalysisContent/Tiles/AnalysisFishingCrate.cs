@@ -19,7 +19,8 @@ namespace AnalysisMod.AnalysisContent.Tiles
             // Placement
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
             TileObjectData.newTile.CoordinateHeights = new int[2] { 16, 18 };
-            TileObjectData.newTile.StyleHorizontal = true; // Optional, if you add more placeStyles for the item 
+            TileObjectData.newTile.StyleHorizontal = true; // Optional, if you add more placeStyles for the item
+                                                           // 如果您为该项目添加了更多的placeStyles，则此项为可选。
             TileObjectData.addTile(Type);
 
             // Etc

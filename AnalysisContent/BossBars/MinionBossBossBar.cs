@@ -20,6 +20,8 @@ namespace AnalysisMod.AnalysisContent.BossBars
 
         public override Asset<Texture2D> GetIconTexture(ref Rectangle? iconFrame)
         {
+            
+
             // Display the previously assigned head index
             // 显示先前分配的头部索引
             if (bossHeadIndex != -1)

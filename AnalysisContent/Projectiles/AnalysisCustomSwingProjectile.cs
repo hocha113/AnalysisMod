@@ -238,7 +238,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
         public override bool PreDraw(ref Color lightColor)
         {
             // Calculate origin of sword (hilt) based on orientation and offset sword rotation (as sword is angled in its sprite)
-            // 根据方向计算剑（柄）的起点，并根据偏移量旋转剑（因为剑在其精灵中呈角度）
+            // 根据方向计算剑（柄）的起点，并根据偏移量旋转剑（因为剑在其精灵图中呈角度）
             Vector2 origin;
             float rotationOffset;
             SpriteEffects effects;

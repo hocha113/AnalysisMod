@@ -14,6 +14,7 @@ using Terraria.Utilities;
 namespace AnalysisMod.AnalysisContent.Tiles
 {
     // Campfires are special tiles that support the block swap feature and the biome torch feature. AnalysisSurfaceBiome shows how the biome campfire is assigned.
+    //篝火是支持方块交换和生物群系火把功能的特殊图块。AnalysisSurfaceBiome 显示了如何分配生物群系篝火。
     public class AnalysisCampfire : ModTile
     {
         private Asset<Texture2D> flameTexture;
@@ -30,6 +31,8 @@ namespace AnalysisMod.AnalysisContent.Tiles
             TileID.Sets.Campfire[Type] = true;
 
             DustType = -1; // No dust when mined.
+                           // 挖掘时不会产生灰尘。
+
             AdjTiles = new int[] { TileID.Campfire };
 
             // Placement
@@ -44,6 +47,7 @@ namespace AnalysisMod.AnalysisContent.Tiles
 			TileObjectData.newTile.DrawYOffset = 2;
 			*/
             TileObjectData.newTile.StyleLineSkip = 9; // This needs to be added to work for modded tiles.
+                                                      // 需要添加以适用于模组图块。
             TileObjectData.addTile(Type);
 
             // Etc
@@ -90,6 +94,9 @@ namespace AnalysisMod.AnalysisContent.Tiles
 
         // ToggleTile is a method that contains code shared by HitWire and RightClick, since they both toggle the state of the tile.
         // Note that TileFrameY doesn't necessarily match up with the image that is drawn, AnimateTile and AnimateIndividualTile contribute to the drawing decisions.
+
+        //ToggleTile 是一个包含 HitWire 和 RightClick 共享代码的方法，因为它们都切换图块状态。
+        //请注意，TileFrameY 不一定与绘制的图片相匹配，AnimateTile 和 AnimateIndividualTile 对绘制决策做出贡献。
         public void ToggleTile(int i, int j)
         {
             Tile tile = Main.tile[i, j];
@@ -148,6 +155,7 @@ namespace AnalysisMod.AnalysisContent.Tiles
             {
                 Tile tile = Main.tile[i, j];
                 // Only emit dust from the top tiles, and only if toggled on. This logic limits dust spawning under different conditions.
+                // 仅从顶部图块发射灰尘，并且仅在开启时才发射。此逻辑限制了在不同条件下生成灰尘的情况。
                 if (tile.TileFrameY == 0 && Main.rand.NextBool(3) && (Main.drawToScreen && Main.rand.NextBool(4) || !Main.drawToScreen))
                 {
                     Dust dust = Dust.NewDustDirect(new Vector2(i * 16 + 2, j * 16 - 4), 4, 8, DustID.Smoke, 0f, 0f, 100);
@@ -200,11 +208,15 @@ namespace AnalysisMod.AnalysisContent.Tiles
                 int addFrY = 0;
 
                 TileLoader.SetDrawPositions(i, j, ref width, ref offsetY, ref height, ref frameX, ref frameY); // calculates the draw offsets
+                                                                                                               // 计算绘制偏移量
+
                 TileLoader.SetAnimationFrame(Type, i, j, ref addFrX, ref addFrY); // calculates the animation offsets
+                                                                                  // 计算动画偏移量
 
                 Rectangle drawRectangle = new Rectangle(tile.TileFrameX, tile.TileFrameY + addFrY, 16, 16);
 
                 // The flame is manually drawn separate from the tile texture so that it can be drawn at full brightness.
+                // 火焰手动单独绘制而不是与图块纹理混合在一起，以便可以完全亮度地绘制。
                 Main.spriteBatch.Draw(flameTexture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y + offsetY) + zero, drawRectangle, color, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
             }
         }

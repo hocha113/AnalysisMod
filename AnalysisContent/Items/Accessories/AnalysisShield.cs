@@ -7,7 +7,7 @@ using Terraria.ModLoader;
 namespace AnalysisMod.AnalysisContent.Items.Accessories
 {
     [AutoloadEquip(EquipType.Shield)] // Load the spritesheet you create as a shield for the player when it is equipped.
-                                      // 加载你创建的精灵表作为玩家装备盾牌时使用。
+                                      // 加载你创建的精灵图表作为玩家装备盾牌时使用。
     public class AnalysisShield : ModItem
     {
         public override void SetDefaults()

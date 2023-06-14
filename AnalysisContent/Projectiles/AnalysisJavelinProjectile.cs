@@ -121,7 +121,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
             }
 
             // Offset the rotation by 90 degrees because the sprite is oriented vertiacally.
-            // 将旋转偏移90度，因为精灵是垂直定向的。
+            // 将旋转偏移90度，因为精灵图是垂直定向的。
             Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.ToRadians(90f);
 
             // Spawn some random dusts as the javelin travels
@@ -192,7 +192,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
                                                   // 用于dusts的位置使用Position
 
             // Offset the rotation by 90 degrees because the sprite is oriented vertiacally.
-            // 将旋转偏移90度，因为精灵是垂直定向的。
+            // 将旋转偏移90度，因为精灵图是垂直定向的。
             Vector2 rotationVector = (Projectile.rotation - MathHelper.ToRadians(90f)).ToRotationVector2(); // rotation vector to use for dust velocity
                                                                                                             // 用于dust速度的旋转向量
             usePos += rotationVector * 16f;
@@ -289,7 +289,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
             // This helps the javelin stick in a visually appealing place within the target sprite.
 
             // 缩小目标命中框一小部分，使得该抛射物只有更直接地击中目标时才会命中。
-            // 这有助于让标枪停留在一个视觉上吸引人的位置，在目标精灵内部。
+            // 这有助于让标枪停留在一个视觉上吸引人的位置，在目标精灵图内部。
             if (targetHitbox.Width > 8 && targetHitbox.Height > 8)
             {
                 targetHitbox.Inflate(-targetHitbox.Width / 8, -targetHitbox.Height / 8);

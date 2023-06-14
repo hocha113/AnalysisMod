@@ -646,7 +646,7 @@ namespace AnalysisMod.AnalysisContent.NPCs
             // Set the correct rotation for this NPC.
             // Assumes the sprite for the NPC points upward.  You might have to modify this line to properly account for your NPC's orientation
             // // 为此 NPC 设置正确的旋转。
-            // 假设该 NPC 的精灵朝上。您可能需要修改此行以正确考虑您的 NPC 方向。
+            // 假设该 NPC 的精灵图朝上。您可能需要修改此行以正确考虑您的 NPC 方向。
             NPC.rotation = NPC.velocity.ToRotation() + MathHelper.PiOver2;
 
             // Some netupdate stuff (multiplayer compatibility).
@@ -718,7 +718,7 @@ namespace AnalysisMod.AnalysisContent.NPCs
                 // Assumes the sprite for the NPC points upward.  You might have to modify this line to properly account for your NPC's orientation
 
                 // 然后我们使用 Atan2 来获得正确朝向那个父级NPC的旋转。
-                // 假设该 NPC 的精灵朝上。您可能需要修改此行以正确考虑您的 NPC 方向。
+                // 假设该 NPC 的精灵图朝上。您可能需要修改此行以正确考虑您的 NPC 方向。
                 worm.NPC.rotation = (float)Math.Atan2(dirY, dirX) + MathHelper.PiOver2;
                 // We also get the length of the direction vector.
                 // 我们还获取了方向矢量的长度。

@@ -20,6 +20,7 @@ namespace AnalysisMod.AnalysisContent.Tiles.Furniture
             Main.tileFrameImportant[Type] = true;
             TileID.Sets.DisableSmartCursor[Type] = true;
             TileID.Sets.IgnoredByNpcStepUp[Type] = true; // This line makes NPCs not try to step up this tile during their movement. Only use this for furniture with solid tops.
+                                                         // 这行代码可以让NPC在移动时不会尝试踏上此方格。只有当家具顶部是实心的时才使用。
 
             DustType = ModContent.DustType<Dusts.Sparkle>();
             AdjTiles = new int[] { TileID.WorkBenches };

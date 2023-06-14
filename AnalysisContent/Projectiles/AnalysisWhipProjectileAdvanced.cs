@@ -72,7 +72,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
             if (!Charge(owner))
             {
                 return; // timer doesn't update while charging, freezing the animation at the start.
-                        // 计时器在充电时不更新，在开始时冻结动画。
+                        // 计时器在充能时不更新，在开始时冻结动画。
             }
 
             Timer++;
@@ -132,7 +132,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
         // If you remove this, also remove Item.channel = true from the item's SetDefaults.
         // Returns true if fully charged
 
-        // 此方法处理充电机制。
+        // 此方法处理充能机制。
         // 如果您删除此内容，请从物品的SetDefaults中也删除Item.channel = true。
         // 充能完全时返回true
         private bool Charge(Player owner)
@@ -162,7 +162,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
             owner.itemTime = owner.itemTimeMax;
 
             return false; // still charging
-                          // 仍在充电中
+                          // 仍在充能中
         }
 
         public override void OnHitNPC(NPC target, NPC.HitInfo hit, int damageDone)
@@ -174,7 +174,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
         }
 
         // This method draws a line between all points of the whip, in case there's empty space between the sprites.
-        // 此方法在鞭子所有点之间绘制线条，以防精灵之间有空白区域。
+        // 此方法在鞭子所有点之间绘制线条，以防精灵图之间有空白区域。
         private void DrawLine(List<Vector2> list)
         {
             Texture2D texture = TextureAssets.FishingLine.Value;
@@ -244,9 +244,9 @@ namespace AnalysisMod.AnalysisContent.Projectiles
                 if (i == list.Count - 2)
                 {
                     // This is the head of the whip. You need to measure the sprite to figure out these values.
-                    // 这是鞭头。 您需要测量精灵才能找出这些值。
+                    // 这是鞭头。 您需要测量精灵图才能找出这些值。
                     frame.Y = 74; // Distance from the top of the sprite to the start of the frame.
-                                  // 距离精灵顶部到框架开始的距离。
+                                  // 距离精灵图顶部到框架开始的距离。
 
                     frame.Height = 18; // Height of the frame.
 

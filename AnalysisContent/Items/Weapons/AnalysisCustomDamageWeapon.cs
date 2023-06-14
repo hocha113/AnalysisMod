@@ -8,8 +8,8 @@ namespace AnalysisMod.AnalysisContent.Items.Weapons
 {
     public class AnalysisCustomDamageWeapon : ModItem
     {
-        public override string Texture => "AnalysisMod/AnalysisContent/Items/Weapons/AnalysisSword"; //TODO: remove when sprite is made for this
-                                                                                                     //待办事项：当精灵为此制作时，请删除
+        public override string Texture => "AnalysisMod/Assets/ItemsVorGet/AdminiumSword_Three"; //TODO: remove when sprite is made for this
+                                                                                                       //待办事项：当精灵图为此制作时，请删除
 
         public override void SetDefaults()
         {

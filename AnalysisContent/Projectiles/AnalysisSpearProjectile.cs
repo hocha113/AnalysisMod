@@ -59,17 +59,17 @@ namespace AnalysisMod.AnalysisContent.Projectiles
             Projectile.Center = player.MountedCenter + Vector2.SmoothStep(Projectile.velocity * HoldoutRangeMin, Projectile.velocity * HoldoutRangeMax, progress);
 
             // Apply proper rotation to the sprite.
-            // 对精灵应用正确的旋转角度。
+            // 对精灵图应用正确的旋转角度。
             if (Projectile.spriteDirection == -1)
             {
                 // If sprite is facing left, rotate 45 degrees
-                // 如果精灵面向左，则旋转45度
+                // 如果精灵图面向左，则旋转45度
                 Projectile.rotation += MathHelper.ToRadians(45f);
             }
             else
             {
                 // If sprite is facing right, rotate 135 degrees
-                // 如果精灵面向右，则旋转135度
+                // 如果精灵图面向右，则旋转135度
                 Projectile.rotation += MathHelper.ToRadians(135f);
             }
 

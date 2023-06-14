@@ -1,6 +1,6 @@
 displayName = AnalysisMod
 author = HoCha113
-version = 1.0
+version = 1.2
 hideCode = false
 hideResources = false
 includeSource = true

@@ -126,7 +126,7 @@ namespace AnalysisMod.AnalysisContent.Pets.AnalysisLightPet
                 Projectile.velocity += Vector2.Normalize(npc.Center - Projectile.Center) * DashSpeed; // Fling the projectile towards the npc.
                                                                                                       // 将弹丸向 NPC 抛出。
                 AIDashCharge = 0f; // Reset the charge.
-                                   // 重置充电。
+                                   // 重置充能。
 
                 // Play a sound.
                 // 播放声音。

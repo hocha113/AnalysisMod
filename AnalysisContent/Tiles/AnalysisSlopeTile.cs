@@ -11,6 +11,7 @@ namespace AnalysisMod.AnalysisContent.Tiles
         {
             Main.tileFrameImportant[Type] = true;
             TileID.Sets.CanBeSloped[Type] = true; // allow this tile to be sloped, because it isn't solid
+                                                  // 允许这个瓦片倾斜，因为它不是实心的
         }
 
         public override bool Slope(int i, int j)

@@ -20,7 +20,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
         public override void SetDefaults()
         {
             // While the sprite is actually bigger than 15x15, we use 15x15 since it lets the projectile clip into tiles as it bounces. It looks better.
-            // 虽然精灵实际上比15x15大，但我们使用15x15是因为这样可以让弹射物在反弹时裁剪到方块内。看起来更好。
+            // 虽然精灵图实际上比15x15大，但我们使用15x15是因为这样可以让弹射物在反弹时裁剪到方块内。看起来更好。
             Projectile.width = DefaultWidthHeight;
             Projectile.height = DefaultWidthHeight;
             Projectile.friendly = true;
@@ -31,7 +31,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
             Projectile.timeLeft = 300;
 
             // These help the projectile hitbox be centered on the projectile sprite.
-            // 这些帮助使得弹射物的碰撞框居中于其精灵之上。
+            // 这些帮助使得弹射物的碰撞框居中于其精灵图之上。
             DrawOffsetX = -2;
             DrawOriginOffsetY = -5;
         }

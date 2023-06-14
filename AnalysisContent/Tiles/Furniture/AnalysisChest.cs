@@ -39,13 +39,20 @@ namespace AnalysisMod.AnalysisContent.Tiles.Furniture
 
             // Other tiles with just one map entry use CreateMapEntryName() to use the default translationkey, "MapEntry"
             // Since AnalysisChest needs multiple, we register our own MapEntry keys
+
+            // 对于只有一个地图条目的其他瓷砖，使用CreateMapEntryName()来使用默认的翻译键“MapEntry”
+            // 由于AnalysisChest需要多个，因此我们注册自己的MapEntry键
             AddMapEntry(new Color(200, 200, 200), this.GetLocalization("MapEntry0"), MapChestName);
             AddMapEntry(new Color(0, 141, 63), this.GetLocalization("MapEntry1"), MapChestName);
 
             // Style 1 is AnalysisChest when locked. We want that tile style to drop the AnalysisChest item as well. Use the Chest Lock item to lock this chest.
             // No item places AnalysisChest in the locked style, so the automatically determined item drop is unknown, this is why RegisterItemDrop is necessary in this situation. 
+
+            // 样式1是锁定时的AnalysisChest。我们希望该样式下掉落AnalysisChest物品。使用箱子锁来锁定这个箱子。
+            // 没有物品会放置在已锁定状态下，因此无法确定自动确定的物品掉落情况，这就是为什么在这种情况下需要RegisterItemDrop。
             RegisterItemDrop(ModContent.ItemType<Items.Placeable.Furniture.AnalysisChest>(), 1);
             // Sometimes mods remove content, such as tile styles, or tiles accidentally get corrupted. We can, if desired, register a fallback item for any tile style that doesn't have an automatically determined item drop. This is done by omitting the tileStyles parameter.
+            // 有时候mod会删除内容（例如tile styles或者tiles被意外损坏）。如果需要可以为任何没有自动确定物品掉落项的tile style注册回退项。通过省略tileStyles参数实现。
             RegisterItemDrop(ItemID.Chest);
 
             // Placement
@@ -69,6 +76,9 @@ namespace AnalysisMod.AnalysisContent.Tiles.Furniture
 
         // This Analysis shows using GetItemDrops to manually decide item drops. This Analysis is for a tile with a TileObjectData.
         // This Analysis is commented out because the RegisterItemDrop line in SetStaticDefaults above handles this situation and is the recommended approach, but the code is still useful to learn from if conditional drops need to be implemented.
+
+        // 此分析展示了如何手动决定项目投放以及TileObjectData所需处理逻辑。
+        // 上面SetStaticDefaults中RegisterItemDrop行处理了此情况并且是推荐方法，但如果需要实现条件性投放，则代码仍然很有用。
         /*
 		public override IEnumerable<Item> GetItemDrops(int i, int j) {
 			Tile tile = Main.tile[i, j];
@@ -119,9 +129,11 @@ namespace AnalysisMod.AnalysisContent.Tiles.Furniture
         {
             int style = TileObjectData.GetTileStyle(Main.tile[i, j]);
             // We need to return true only if the tile style is the unlocked variant of a chest that supports locking. 
+            // 我们只需要在tile style为支持锁定的chest未解锁变体时返回true即可。
             if (style == 0)
             {
                 // We can check other conditions as well, such as how biome chests can't be locked until Plantera is defeated
+                // 我们还可以检查其他条件，例如生态群系宝箱直到击败Plantera才能被锁住
                 return true;
             }
             return false;
@@ -164,6 +176,7 @@ namespace AnalysisMod.AnalysisContent.Tiles.Furniture
         public override void KillMultiTile(int i, int j, int frameX, int frameY)
         {
             // We override KillMultiTile to handle additional logic other than the item drop. In this case, unregistering the Chest from the world
+            // 我们重写KillMultiTile以处理除了物品掉落之外的其他逻辑。在这种情况下，从世界中注销Chest
             Chest.DestroyChest(i, j);
         }
 
@@ -221,6 +234,7 @@ namespace AnalysisMod.AnalysisContent.Tiles.Furniture
                 if (isLocked)
                 {
                     // Make sure to change the code in UnlockChest if you don't want the chest to only unlock at night.
+                    // 如果您不希望箱子仅在夜间解锁，请确保更改UnlockChest中的代码。
                     int key = ModContent.ItemType<AnalysisChestKey>();
                     if (player.ConsumeItem(key, includeVoidBag: true) && Chest.Unlock(left, top))
                     {
@@ -280,6 +294,8 @@ namespace AnalysisMod.AnalysisContent.Tiles.Furniture
             else
             {
                 string defaultName = TileLoader.DefaultContainerName(tile.TileType, tile.TileFrameX, tile.TileFrameY); // This gets the ContainerName text for the currently selected language
+                                                                                                                       // 此处获取当前选择语言的ContainerName文本
+
                 player.cursorItemIconText = Main.chest[chest].name.Length > 0 ? Main.chest[chest].name : defaultName;
                 if (player.cursorItemIconText == defaultName)
                 {

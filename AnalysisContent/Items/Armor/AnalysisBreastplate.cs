@@ -9,7 +9,7 @@ namespace AnalysisMod.AnalysisContent.Items.Armor
     // Providing the EquipType.Body value here will result in TML expecting X_Arms.png, X_Body.png and X_FemaleBody.png sprite-sheet files to be placed next to the item's main texture.
 
     // AutoloadEquip属性会自动将装备纹理附加到该物品上。
-    // 在此处提供EquipType.Body值将导致TML期望在物品的主纹理旁边放置X_Arms.png、X_Body.png和X_FemaleBody.png精灵表文件。
+    // 在此处提供EquipType.Body值将导致TML期望在物品的主纹理旁边放置X_Arms.png、X_Body.png和X_FemaleBody.png精灵图表文件。
     [AutoloadEquip(EquipType.Body)]
     public class AnalysisBreastplate : ModItem
     {

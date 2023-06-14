@@ -9,6 +9,7 @@ using Terraria.ObjectData;
 namespace AnalysisMod.AnalysisContent.Tiles.Furniture
 {
     // Simple 3x3 tile that can be placed on a wall
+    // 可以放置在墙上的简单3x3瓷砖
     public class MinionBossTrophy : ModTile
     {
         public override void SetStaticDefaults()

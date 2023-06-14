@@ -13,6 +13,9 @@ namespace AnalysisMod.AnalysisContent.Tiles
 {
     // This class shows off many things common to Lamp tiles in Terraria. The process for creating this Analysis is detailed in: https://github.com/tModLoader/tModLoader/wiki/Advanced-Vanilla-Code-Adaption#Analysislamp-tile
     // If you can't figure out how to recreate a vanilla tile, see that guide for instructions on how to figure it out yourself.
+
+    // 这个类展示了许多 Terraria 中常见的灯瓦片。创建此分析的过程详见：https://github.com/tModLoader/tModLoader/wiki/Advanced-Vanilla-Code-Adaption#Analysislamp-tile
+    // 如果您无法弄清如何重新创建一个原版瓦片，请参阅该指南以获取自行解决问题的说明。
     internal class AnalysisLamp : ModTile
     {
         private Asset<Texture2D> flameTexture;
@@ -26,6 +29,7 @@ namespace AnalysisMod.AnalysisContent.Tiles
             Main.tileWaterDeath[Type] = true;
             Main.tileLavaDeath[Type] = true;
             // Main.tileFlame[Type] = true; // Main.tileFlame is only useful for vanilla tiles. Modded tiles can manually draw flames in PostDraw.
+                                            // Main.tileFlame 仅适用于原版瓦片。模组化的瓦片可以在 PostDraw 中手动绘制火焰。
 
             // Placement
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1xX);
@@ -43,6 +47,7 @@ namespace AnalysisMod.AnalysisContent.Tiles
             if (!Main.dedServ)
             {
                 flameTexture = ModContent.Request<Texture2D>("AnalysisMod/AnalysisContent/Tiles/AnalysisLamp_Flame"); // We could also reuse Main.FlameTexture[] textures, but using our own texture is nice.
+                                                                                                                      // 我们也可以重复使用 Main.FlameTexture[] 纹理，但使用自己的纹理更好。
             }
         }
 
@@ -61,6 +66,7 @@ namespace AnalysisMod.AnalysisContent.Tiles
             Wiring.SkipWire(i, topY + 2);
 
             // Avoid trying to send packets in singleplayer.
+            // 避免在单人游戏中尝试发送数据包。
             if (Main.netMode != NetmodeID.SinglePlayer)
             {
                 NetMessage.SendTileSquare(-1, i, topY + 1, 3, TileChangeType.None);
@@ -81,6 +87,7 @@ namespace AnalysisMod.AnalysisContent.Tiles
             if (tile.TileFrameX == 0)
             {
                 // We can support different light colors for different styles here: switch (tile.frameY / 54)
+                // 我们可以支持不同风格的不同光源颜色：switch (tile.frameY / 54)
                 r = 1f;
                 g = 0.75f;
                 b = 1f;
@@ -100,6 +107,7 @@ namespace AnalysisMod.AnalysisContent.Tiles
             short frameY = tile.TileFrameY;
 
             // Return if the lamp is off (when frameX is 0), or if a random check failed.
+            // 当 frameX 为0（即关闭状态）或随机检查失败时返回。
             if (frameX != 0 || !Main.rand.NextBool(40))
             {
                 return;
@@ -117,6 +125,7 @@ namespace AnalysisMod.AnalysisContent.Tiles
                 }
 
                 // We can support different dust for different styles here
+                // 我们可以支持不同风格的不同粒子效果
                 if (dustChoice != -1)
                 {
                     var dust = Dust.NewDustDirect(new Vector2(i * 16 + 4, j * 16 + 2), 4, 4, dustChoice, 0f, 0f, 100, default, 1f);
@@ -158,8 +167,10 @@ namespace AnalysisMod.AnalysisContent.Tiles
             TileLoader.SetDrawPositions(i, j, ref width, ref offsetY, ref height, ref frameX, ref frameY);
 
             ulong randSeed = Main.TileFrameSeed ^ (ulong)((long)j << 32 | (uint)i); // Don't remove any casts.
+                                                                                    // 请勿删除任何转换操作符。
 
             // We can support different flames for different styles here: int style = Main.tile[j, i].frameY / 54;
+            // 我们可以支持不同风格的不同火焰效果：int style = Main.tile[j, i].frameY / 54;
             for (int c = 0; c < 7; c++)
             {
                 float shakeX = Utils.RandomInt(ref randSeed, -10, 11) * 0.15f;

@@ -138,11 +138,11 @@ namespace AnalysisMod.AnalysisContent.NPCs
         // We set npc.frame.Y to x * frameHeight where x is the xth frame in our spritesheet, counting from 0. For convenience, we have defined a enum above.
 
         // 在FindFrame中，在根据它正在做什么设置动画帧之前要设置我们的npc将使用哪个动画帧。
-        // 我们将npc.frame.Y设置为x * frameHeight，其中x是从0开始计算我们精灵表格中第x个框架。为方便起见，在上面定义了一个枚举类型。
+        // 我们将npc.frame.Y设置为x * frameHeight，其中x是从0开始计算我们精灵图表格中第x个框架。为方便起见，在上面定义了一个枚举类型。
         public override void FindFrame(int frameHeight)
         {
             // This makes the sprite flip horizontally in conjunction with the npc.direction.
-            // 这使得精灵水平翻转与npc.direction相结合。
+            // 这使得精灵图水平翻转与npc.direction相结合。
             NPC.spriteDirection = NPC.direction;
 
             // For the most part, our animation matches up with our states.

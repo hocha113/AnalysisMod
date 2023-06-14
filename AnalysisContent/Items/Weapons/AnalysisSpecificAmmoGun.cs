@@ -18,7 +18,7 @@ namespace AnalysisMod.AnalysisContent.Items.Weapons
         private bool consumptionDamageBoost = false;
 
         public override string Texture => "AnalysisMod/AnalysisContent/Items/Weapons/AnalysisGun"; //TODO: remove when sprite is made for this
-                                                                                                   //TODO：制作精灵后删除此部分
+                                                                                                   //TODO：制作精灵图后删除此部分
 
         public override LocalizedText Tooltip => base.Tooltip.WithFormatArgs(FreeAmmoChance1, FreeAmmoChance2, FreeAmmoChance3, AmmoUseDamageBoost);
 

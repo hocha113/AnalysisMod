@@ -185,7 +185,7 @@ namespace AnalysisMod.AnalysisContent.NPCs
         // The PreDraw hook is useful for drawing things before our sprite is drawn or running code before the sprite is drawn
         // Returning false will allow you to manually draw your NPC
 
-        // PreDraw钩子对于绘制我们的精灵之前绘制东西或运行代码非常有用
+        // PreDraw钩子对于绘制我们的精灵图之前绘制东西或运行代码非常有用
         // 返回false将允许您手动绘制您的 NPC
         public override bool PreDraw(SpriteBatch spriteBatch, Vector2 screenPos, Color drawColor)
         {

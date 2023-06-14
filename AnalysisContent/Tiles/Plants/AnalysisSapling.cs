@@ -48,6 +48,7 @@ namespace AnalysisMod.AnalysisContent.Tiles.Plants
             TileID.Sets.CommonSapling[Type] = true;
             TileID.Sets.SwaysInWindBasic[Type] = true;
             TileMaterials.SetForTileId(Type, TileMaterials._materialsByName["Plant"]); // Make this tile interact with golf balls in the same way other plants do
+                                                                                       // 让这个方块与其他植物一样与高尔夫球互动
 
             DustType = ModContent.DustType<Sparkle>();
 
@@ -62,16 +63,23 @@ namespace AnalysisMod.AnalysisContent.Tiles.Plants
         public override void RandomUpdate(int i, int j)
         {
             // A random chance to slow down growth
+            // 有随机几率减缓生长速度
             if (!WorldGen.genRand.NextBool(20))
             {
                 return;
             }
 
             Tile tile = Framing.GetTileSafely(i, j); // Safely get the tile at the given coordinates
+                                                     // 安全地获取给定坐标的方块
+
             bool growSucess; // A bool to see if the tree growing was sucessful.
+                             // 一个布尔值来判断树苗是否成功种植。
 
             // Style 0 is for the AnalysisTree sapling, and style 1 is for AnalysisPalmTree, so here we check frameX to call the correct method.
             // Any pixels before 54 on the tilesheet are for AnalysisTree while any pixels above it are for AnalysisPalmTree
+
+            // 样式0用于AnalysisTree树苗，样式1用于AnalysisPalmTree棕榈树，因此我们检查frameX以调用正确的方法。
+            // 在图块表中54之前的像素是为AnalysisTree而上面的像素则是为AnalysisPalmTree。
             if (tile.TileFrameX < 54)
             {
                 growSucess = WorldGen.GrowTree(i, j);
@@ -82,9 +90,11 @@ namespace AnalysisMod.AnalysisContent.Tiles.Plants
             }
 
             // A flag to check if a player is near the sapling
+            // 一个标志来检查玩家是否靠近树苗
             bool isPlayerNear = WorldGen.PlayerLOS(i, j);
 
             //If growing the tree was a sucess and the player is near, show growing effects
+            // 如果种植树木成功并且玩家在附近，则显示生长效果。
             if (growSucess && isPlayerNear)
             {
                 WorldGen.TreeGrowFXCheck(i, j);

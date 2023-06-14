@@ -99,7 +99,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
             Projectile.velocity *= 1.01f;
 
             // If the sprite points upwards, this will make it point towards the move direction (for other sprite orientations, change MathHelper.PiOver2)
-            //如果精灵朝上，则使其指向移动方向（对于其他精灵方向，请更改MathHelper.PiOver2）
+            //如果精灵图朝上，则使其指向移动方向（对于其他精灵图方向，请更改MathHelper.PiOver2）
             Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2;
         }
     }

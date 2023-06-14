@@ -12,6 +12,7 @@ namespace AnalysisMod.AnalysisCommon.Players
     public class AnalysisCostumePlayer : ModPlayer
     {
         // These 5 relate to AnalysisCostume.
+        // 这5个与AnalysisCostume有关。
         public bool BlockyAccessoryPrevious;
         public bool BlockyAccessory;
         public bool BlockyHideVanity;
@@ -40,6 +41,7 @@ namespace AnalysisMod.AnalysisCommon.Players
         public override void UpdateEquips()
         {
             // Make sure this condition is the same as the condition in the Buff to remove itself. We do this here instead of in ModItem.UpdateAccessory in case we want future upgraded items to set blockyAccessory
+            // 确保此条件与Buff中的条件相同以便移除自身。我们在这里执行而不是在ModItem.UpdateAccessory中执行，以防将来升级物品设置blockyAccessory
             if (Player.townNPCs >= 1 && BlockyAccessory)
             {
                 Player.AddBuff(ModContent.BuffType<Blocky>(), 60);
@@ -49,6 +51,7 @@ namespace AnalysisMod.AnalysisCommon.Players
         public override void FrameEffects()
         {
             // TODO: Need new hook, FrameEffects doesn't run while paused.
+            // TODO: 需要新的钩子，FrameEffects在暂停时不运行。
             if ((BlockyPower || BlockyForceVanity) && !BlockyHideVanity)
             {
                 var AnalysisCostume = ModContent.GetInstance<AnalysisCostume>();
@@ -57,6 +60,7 @@ namespace AnalysisMod.AnalysisCommon.Players
                 Player.legs = EquipLoader.GetEquipSlot(Mod, AnalysisCostume.Name, EquipType.Legs);
 
                 // Use the alternative equipment textures by calling them through their internal name.
+                // 通过调用其内部名称使用备用装备纹理。
                 if (Player.wet)
                 {
                     Player.head = EquipLoader.GetEquipSlot(Mod, "BlockyAlt", EquipType.Head);

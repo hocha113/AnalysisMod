@@ -7,6 +7,7 @@ using AnalysisMod.AnalysisCommon.Systems;
 namespace AnalysisMod.AnalysisCommon.Players
 {
     // See Common/Systems/KeybindSystem for keybind registration.
+    // 请查看Common/Systems/KeybindSystem以进行按键绑定注册。
     public class AnalysisKeybindPlayer : ModPlayer
     {
         public override void ProcessTriggers(TriggersSet triggersSet)
