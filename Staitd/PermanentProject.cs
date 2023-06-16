@@ -5,6 +5,7 @@ using Terraria.ModLoader.IO;
 
 namespace AnalysisMod.Staitd
 {
+    //【未完成】
     public class MyModPlayer : ModPlayer
     {
         public int ETR=0;

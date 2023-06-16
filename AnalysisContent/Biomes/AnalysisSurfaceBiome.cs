@@ -15,6 +15,8 @@ namespace AnalysisMod.AnalysisContent.Biomes
         // Select all the scenery
         //选择所有景观
         public override ModWaterStyle WaterStyle => ModContent.Find<ModWaterStyle>("AnalysisMod/AnalysisWaterStyle"); // Sets a water style for when inside this biome
+                                                                                                                      // 设置在该生物群系内部的水样式
+
         public override ModSurfaceBackgroundStyle SurfaceBackgroundStyle => ModContent.Find<ModSurfaceBackgroundStyle>("AnalysisMod/AnalysisSurfaceBackgroundStyle");
         public override CaptureBiome.TileColorStyle TileColorStyle => CaptureBiome.TileColorStyle.Crimson;
 

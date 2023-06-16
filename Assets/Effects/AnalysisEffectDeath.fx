@@ -14,6 +14,7 @@ float2 uImageSize0;
 float2 uImageSize1;
 
 // This is a shader. You are on your own with shaders. Compile shaders in an XNB project.
+// 这是一个着色器。你可以自己使用着色器。在XNB项目中编译着色器。
 
 float4 PixelShaderFunction(float2 coords : TEXCOORD0) : COLOR0
 {

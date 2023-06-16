@@ -1,4 +1,5 @@
 # This file will automatically update with entries for new Content after a build and reload
+# 此文件将在构建和重新加载后自动更新新内容的条目
 
 Items: {
 	AnalysisSword: {

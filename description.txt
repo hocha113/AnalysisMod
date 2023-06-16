@@ -1,20 +1,35 @@
 ﻿这是一个新的解析案例模组，相当于中文版本的ExampleMod。如果您是以汉语为母语的模组制作者，通过阅读此模组的源码来学习TmodLoader模组开发是个不错的选择！
 AnalysisMod在ExampleMod的基础上为所有注释添加了中文翻译和大量的额外注解，并延申出了更多的额外解析案例！
-此模组仅供开发者交流学习所用，ExampleMod源码请见：https://github.com/tModLoader/tModLoader/tree/1.4.4/ExampleMod
-每次更新后，您都需要重新提取才能获取最新版本的AnalysisMod的源码，或者，您可以前往GitHup提取最新的AnalysisMod源码：https://github.com/hocha113/AnalysisMod
+每次更新后，您都需要重新提取才能获取最新版本的AnalysisMod的源码。
 
-关于1.2版本的更新：
-1-重置了物品、Buff、物块、NPC的贴图，以便于与ExampleMod有所区分度，方便演示
-2-完善了各处翻译，并且，为 AnalysisCommon/Players 文件夹的注释添加正确的中文副本
+或者，您可以前往GitHub提取最新的AnalysisMod源码：
+https://github.com/hocha113/AnalysisMod
+
+此模组仅供开发者交流学习所用，ExampleMod源码请见：
+https://github.com/tModLoader/tModLoader/tree/1.4.4/ExampleMod
+
+关于1.3版本的更新：
+1-新增：译者的话
+2-完成了对'AnalysisCommon/AnalysisUI'部分的代码注释翻译
+3-完成了对'AnalysisCommon/Systems'部分的代码注释翻译
+4-贴图重置
 
 
-This is a new analysis case module, equivalent to the Chinese version of ExampleMod. If you are a mod maker whose native language is Chinese, 
-reading the source code of this module to learn TmodLoader mod development is a good choice!
-AnalysisMod adds Chinese translations and numerous additional annotations to all comments based on ExampleMod, and extends more additional parsing cases!
-This module is only for developers' communication and learning purposes. For ExampleMod source code, please visit: https://github.com/tModLoader/tModLoader/tree/1.4.4/ExampleMod
-After each update, you need to extract it again to get the latest version of AnalysisMod's source code. 
-Alternatively, you can go to GitHup to extract the latest AnalysisMod source code: https://github.com/hocha113/AnalysisMod
+This is a new analysis case Mod, equivalent to the Chinese version of ExampleMod. 
+If you are a Mod maker whose native language is Chinese, reading the source code of this Mod to learn TmodLoader module development is a good choice!
+The AnalysisMod adds Chinese translations and numerous additional annotations to all comments based on ExampleMod, and extends more additional parsing cases!
 
-Regarding the 1.2 version update:
-1-Resetting item, Buffs, block and NPC textures for better distinction from Example Mod and easier demonstration.
-2-Improved translations throughout and added correct Chinese copies for annotations in AnalysisCommon/Players folder.
+After each update, you need to extract it again in order to obtain the latest version of the AnalysisMod's source code. 
+Alternatively, you can visit the GitHub page to extract the latest source code for AnalysisMod:
+https://github.com/hocha113/AnalysisMod
+
+This Mod is only for developers' communication and learning purposes. Please refer to the ExampleMod source code at:
+https://github.com/tModLoader/tModLoader/tree/1.4.4/ExampleMod
+
+Regarding updates for version 1.3:
+1- Added translator notes
+2- Completed translation of code comments for 'AnalysisCommon/AnalysisUI'
+3- Completed translation of code comments for 'AnalysisCommon/Systems'
+4- Reset images
+
+

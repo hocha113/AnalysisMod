@@ -28,6 +28,7 @@ namespace AnalysisMod.AnalysisCommon.Players
         // 用于在消耗Analysis Dodge和下一次获取dodge buff之间添加延迟。
 
         public int AnalysisDodgeCooldown;
+
         // Controls the intensity of the visual effect of the dodge.
         // 控制闪避视觉效果的强度。
         public int AnalysisDodgeVisualCounter;

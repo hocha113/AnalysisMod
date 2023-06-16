@@ -54,8 +54,10 @@ namespace AnalysisMod.AnalysisContent.Biomes
         /*
 		public override float GetWeight(Player player) {
 			int distanceToCenter = Math.Abs(player.position.ToTileCoordinates().X - Main.maxTilesX / 2);
+
 			// We declare that our biome should have be more likely than not to be active if in center 1/6 of the world, and decreases in need to be active as player gets further away to the 1/3 mark.
             //声明我们的生态系统应该更可能处于活跃状态，在世界中心1/6时，并随着玩家远离1/3标记而减少。
+
 			if (distanceToCenter <= Main.maxTilesX / 12) {
 				return 1f;
 			}

@@ -17,7 +17,7 @@ namespace AnalysisMod.AnalysisContent.Items.Accessories
             IL_Player.beeType += HookBeeType;
         }
 
-        // This IL editing (Intermediate Language editing) Example is walked through in the guide: https://github.com/tModLoader/tModLoader/wiki/Expert-IL-Editing#Analysis---hive-pack-upgrade
+        // This IL editing (Intermediate Language editing) Analysis is walked through in the guide: https://github.com/tModLoader/tModLoader/wiki/Expert-IL-Editing#Analysis---hive-pack-upgrade
         // 这个IL编辑（中间语言编辑）模组在指南中有详细介绍：https://github.com/tModLoader/tModLoader/wiki/Expert-IL-Editing#Analysis---hive-pack-upgrade
         private static void HookBeeType(ILContext il)
         {

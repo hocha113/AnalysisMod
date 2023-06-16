@@ -17,6 +17,7 @@ namespace AnalysisMod.AnalysisContent.Items
             {
                 // The following code creates an effect (shader) reference and associates it with this item's type Id.
                 // 以下代码创建一个效果（着色器）引用，并将其与此项的类型 ID 关联起来。
+                // 【未完成，启用此代码后如果调用该物品的染色功能会导致游戏崩溃】
                 GameShaders.Armor.BindShader(
                     Item.type,
                     new ArmorShaderData(new Ref<Effect>(Mod.Assets.Request<Effect>("Assets/Effects/AnalysisEffect", AssetRequestMode.ImmediateLoad).Value), "AnalysisDyePass") // Be sure to update the effect path and pass name here.
