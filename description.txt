@@ -8,11 +8,9 @@ https://github.com/hocha113/AnalysisMod
 此模组仅供开发者交流学习所用，ExampleMod源码请见：
 https://github.com/tModLoader/tModLoader/tree/1.4.4/ExampleMod
 
-关于1.3版本的更新：
-1-新增：译者的话
-2-完成了对'AnalysisCommon/AnalysisUI'部分的代码注释翻译
-3-完成了对'AnalysisCommon/Systems'部分的代码注释翻译
-4-贴图重置
+关于1.3.2版本的更新：
+1-新增：AdditionalAnalysis部分
+2-修复了错误的图片与一些拼写错误
 
 
 This is a new analysis case Mod, equivalent to the Chinese version of ExampleMod. 
@@ -26,10 +24,8 @@ https://github.com/hocha113/AnalysisMod
 This Mod is only for developers' communication and learning purposes. Please refer to the ExampleMod source code at:
 https://github.com/tModLoader/tModLoader/tree/1.4.4/ExampleMod
 
-Regarding updates for version 1.3:
-1- Added translator notes
-2- Completed translation of code comments for 'AnalysisCommon/AnalysisUI'
-3- Completed translation of code comments for 'AnalysisCommon/Systems'
-4- Reset images
+Regarding the update of version 1.3.2:
+1- Added: AdditionalAnalysis section
+2- Fixed incorrect images and some spelling errors
 
 
