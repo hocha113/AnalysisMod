@@ -46,25 +46,25 @@ namespace AnalysisMod.AnalysisCommon.AnalysisUI.ResourceOverlay
             else if (CompareAssets(asset, fancyFolder + "Heart_Fill") || CompareAssets(asset, fancyFolder + "Heart_Fill_B"))
             {
                 // Draw over the Fancy hearts
-                // 绘制华丽心形图案(1.4新生命心样式)上方的内容
+                // 绘制华精致形图案(1.4新生命心样式)上方的内容
                 DrawClassicFancyOverlay(context);
             }
             else if (CompareAssets(asset, barsFolder + "HP_Fill") || CompareAssets(asset, barsFolder + "HP_Fill_Honey"))
             {
                 // Draw over the Bars life bars
-                // 绘制条状生命栏上方的内容
+                // 绘制水平条生命栏上方的内容
                 DrawBarsOverlay(context);
             }
             else if (CompareAssets(asset, fancyFolder + "Heart_Left") || CompareAssets(asset, fancyFolder + "Heart_Middle") || CompareAssets(asset, fancyFolder + "Heart_Right") || CompareAssets(asset, fancyFolder + "Heart_Right_Fancy") || CompareAssets(asset, fancyFolder + "Heart_Single_Fancy"))
             {
                 // Draw over the Fancy heart panels
-                // 绘制华丽心形面板(1.4新生命条样式)上方的内容
+                // 绘制精致心形面板(1.4新生命条样式)上方的内容
                 DrawFancyPanelOverlay(context);
             }
             else if (drawingBarsPanels)
             {
                 // Draw over the Bars middle life panels
-                // 在条状生命栏中间绘制内容
+                // 在水平条生命栏中间绘制内容
                 DrawBarsPanelOverlay(context);
             }
         }
@@ -85,7 +85,7 @@ namespace AnalysisMod.AnalysisCommon.AnalysisUI.ResourceOverlay
             // "context" contains information used to draw the resource
             // If you want to draw directly on top of the vanilla hearts, just replace the texture and have the context draw the new texture
 
-            // 在经典/华丽心形图案之上进行绘画
+            // 在经典/精致心形图案之上进行绘画
             //"context"包含用于绘画资源所需信息。
             //如果要直接在香草心脏顶部进行绘画，请替换纹理并让context将新纹理进行绘画。
             context.texture = heartTexture ??= ModContent.Request<Texture2D>("AnalysisMod/AnalysisCommon/AnalysisUI/ResourceOverlay/ClassicLifeOverlay");
@@ -100,13 +100,14 @@ namespace AnalysisMod.AnalysisCommon.AnalysisUI.ResourceOverlay
         private void DrawFancyPanelOverlay(ResourceOverlayDrawContext context)
         {
             // Draw over the Fancy heart panels
+            // 绘制精致心形面板
             string fancyFolder = "Images/UI/PlayerResourceSets/FancyClassic/";
 
             // The original position refers to the entire panel slice.
             // However, since this overlay only modifies the "inner" portion of the slice (aka the part behind the heart),
             // the position should be modified to compensate for the sprite size difference
 
-            // 在华丽心形面板之上进行描画
+            // 在精致心形面板之上进行描画
             // 原始位置指整个面板切片。
             //但是，由于此叠加层仅修改了切片（即位于心脏后面的部分） 的“内部”部分，
             Vector2 positionOffset;
@@ -114,7 +115,7 @@ namespace AnalysisMod.AnalysisCommon.AnalysisUI.ResourceOverlay
             if (context.resourceNumber == context.snapshot.AmountOfLifeHearts)
             {
                 // Final panel to draw has a special "Fancy" variant.  Determine whether it has panels to the left of it
-                // 最终面板有一个特殊的“华丽”变体。 确定其左侧是否有面板
+                // 最终面板有一个特殊的“精致”变体。 确定其左侧是否有面板
                 if (CompareAssets(context.texture, fancyFolder + "Heart_Single_Fancy"))
                 {
                     // First and only panel in this panel's row

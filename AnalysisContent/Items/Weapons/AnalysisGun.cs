@@ -83,7 +83,7 @@ namespace AnalysisMod.AnalysisContent.Items.Weapons
         // 此方法允许您调整玩家手中枪械的位置。根据您的图形进行调整，直到看起来很好。
         public override Vector2? HoldoutOffset()
         {
-            return new Vector2(2f, -2f);
+            return new Vector2(12f, 2f);
         }
 
         //TODO: Move this to a more specifically named Analysis. Say, a paint gun?

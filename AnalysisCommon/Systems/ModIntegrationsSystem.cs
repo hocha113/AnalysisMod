@@ -66,7 +66,7 @@ namespace AnalysisMod.AnalysisCommon.Systems
             int npcType = ModContent.NPCType<AnalysisContent.NPCs.AnalysisPerson>();
 
             // The message makes use of chat tags to make the item appear directly, making it more fancy
-            // 该消息利用聊天标签使物品直接出现，使其更加华丽
+            // 该消息利用聊天标签使物品直接出现，使其更加精致
             string message = $"Have either an Analysis Item [i:{ModContent.ItemType<AnalysisContent.Items.AnalysisItem>()}] or an Analysis Block [i:{ModContent.ItemType<AnalysisContent.Items.Placeable.AnalysisBlock>()}] in your inventory";
 
             // Finally, call the desired method
