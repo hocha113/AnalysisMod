@@ -9,8 +9,10 @@ using Terraria.Audio;
 using Terraria.GameInput;
 using Mono.Cecil;
 using System;
-using AnalysisMod.Staitd;
 using System.Security.Cryptography.X509Certificates;
+using AnalysisMod.Staitd.ProjectE_Etr;
+using System.Collections.Generic;
+using Terraria.ModLoader.IO;
 
 namespace AnalysisMod.AnalysisContent.Items.Weapons
 {
@@ -55,7 +57,7 @@ namespace AnalysisMod.AnalysisContent.Items.Weapons
 
         public override void ModifyShootStats(Player player, ref Vector2 position, ref Vector2 velocity, ref int type, ref int damage, ref float knockback)
         {
-            MyModPlayer modPlayer = Main.LocalPlayer.GetModPlayer<MyModPlayer>();
+            EtrSyter modPlayer = Main.LocalPlayer.GetModPlayer<EtrSyter>();
             Random random = new Random();
             int randomInt = random.Next(0, 10);
 
@@ -143,6 +145,15 @@ namespace AnalysisMod.AnalysisContent.Items.Weapons
             //        break;
             //}
             //type = ProjectileID.FirstFractal;
+        }
+
+        public override void ModifyTooltips(List<TooltipLine> tooltips)
+        {
+            Player player = Main.player[Main.myPlayer];
+            EtrSyter etrSyter = player.GetModPlayer<EtrSyter>();
+            TooltipLine tooltipLine = new TooltipLine(Mod, "ETR: " + etrSyter.ETR, "ETR: " + etrSyter.ETR) { };
+
+            tooltips.Add(tooltipLine);
         }
 
         public override bool PreDrawInWorld(SpriteBatch spriteBatch, Color lightColor, Color alphaColor, ref float rotation, ref float scale, int whoAmI)

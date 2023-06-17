@@ -29,6 +29,8 @@ namespace AnalysisMod.AnalysisContent.BossBars
                                               // Corgi头像
         }
 
+        public override string Texture => base.Texture;
+
         public override bool PreDraw(SpriteBatch spriteBatch, NPC npc, ref BossBarDrawParams drawParams)
         {
             // Make the bar shake the less health the NPC has

@@ -18,10 +18,10 @@ namespace AnalysisMod
 		}
 
         // Override this method to handle network packets sent for this mod.
-        //TODO: Introduce OOP packets into tML, to avoid this god-class level hardcode.
+        // TODO: Introduce OOP packets into tML, to avoid this god-class level hardcode.
 
         // 重写此方法以处理发送给此mod的网络数据包。
-        //TODO: 引入OOP数据包到tML中，避免这种神级别硬编码。
+        // TODO: 引入OOP数据包到tML中，避免这种神级别硬编码。
         public override void HandlePacket(BinaryReader reader, int whoAmI) {
 			MessageType msgType = (MessageType)reader.ReadByte();
 

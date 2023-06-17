@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using AnalysisMod.Staitd.ProjectE_Etr;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
@@ -13,7 +14,7 @@ namespace AnalysisMod.AnalysisContent.Items
     {
         public Color[] colors;
 
-        public override string Texture => "AnalysisMod/AnalysisContent/Items/AnalysisItem";
+        string TextureString= "AnalysisMod/AnalysisContent/Items/AnalysisItem_1_0";
 
         public override void SetDefaults()
         {
@@ -23,7 +24,8 @@ namespace AnalysisMod.AnalysisContent.Items
 
         public override ModItem Clone(Item item)
         {
-            AnalysisInstancedItem clone = (AnalysisInstancedItem)base.Clone(item);
+            AnalysisInstancedItem clone = (AnalysisInstancedItem)base.Clone(item);//【执行类的克隆操作】
+
             clone.colors = (Color[])colors?.Clone(); // note the ? here is important, colors may be null if spawned from other mods which don't call OnCreate
                                                      // 请注意，这里的问号很重要，如果从其他未调用OnCreate方法的模组生成，则颜色可能为空。
             return clone;
@@ -31,8 +33,10 @@ namespace AnalysisMod.AnalysisContent.Items
 
         public override void OnCreated(ItemCreationContext context)
         {
-            GenerateNewColors();
+            GenerateNewColors();           
         }
+
+        public override string Texture => TextureString;
 
         private void GenerateNewColors()
         {
@@ -40,7 +44,7 @@ namespace AnalysisMod.AnalysisContent.Items
             for (int i = 0; i < 5; i++)
             {
                 colors[i] = Main.hslToRgb(Main.rand.NextFloat(), 1f, 0.7f);
-            }
+            }           
         }
 
         public override void ModifyTooltips(List<TooltipLine> tooltips)
@@ -49,10 +53,14 @@ namespace AnalysisMod.AnalysisContent.Items
                                 //如果从其他未调用OnCreate的模组生成，则颜色可能为空
                 return;
 
+            EtrSyter etrSyter = new EtrSyter();
+            TooltipLine tooltipLine1 = new TooltipLine(Mod, "ETR: " + etrSyter.ETR, "") { };
+            tooltips.Add(tooltipLine1);
+
             for (int i = 0; i < colors.Length; i++)
-            {
+            {                
                 TooltipLine tooltipLine = new TooltipLine(Mod, "EM" + i, "Analysis " + i) { OverrideColor = colors[i] };
-                tooltips.Add(tooltipLine);
+                tooltips.Add(tooltipLine);                
             }
         }
 
@@ -74,7 +82,7 @@ namespace AnalysisMod.AnalysisContent.Items
         // Read https://github.com/tModLoader/tModLoader/wiki/Saving-and-loading-using-TagCompound to better understand Saving and Loading data.
 
         // 注意：此处提供的标签实例默认始终为空。
-        // 请阅读https://github.com/tModLoader/tModLoader/wiki/Saving-and-loading-using-TagCompound以更好地理解数据保存和加载。
+        // 请阅读 https://github.com/tModLoader/tModLoader/wiki/Saving-and-loading-using-TagCompound 以更好地理解数据保存和加载。
         public override void SaveData(TagCompound tag)
         {
             tag["Colors"] = colors;

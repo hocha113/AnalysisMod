@@ -5,10 +5,6 @@ using Terraria.ModLoader;
 using Terraria.ID;
 
 namespace AnalysisMod.AnalysisCommon.Players
-{
-    // This class showcases how to use items in the chest player stands on (if exists)
-    // for crafting, even if it is not opened by the player
-    // One use of this is allowing items in your custom bank to be used for crafting
 
     // 这个类展示了如何使用玩家站在上面的箱子中的物品进行合成，即使它没有被玩家打开
     // 其中一个用途是允许自定义储存箱中的物品用于合成

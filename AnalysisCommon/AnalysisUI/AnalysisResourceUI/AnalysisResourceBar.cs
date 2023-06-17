@@ -18,7 +18,7 @@ namespace AnalysisMod.AnalysisCommon.AnalysisUI.AnalysisResourceUI
         // For this bar we'll be using a frame texture and then a gradient inside bar, as it's one of the more simpler approaches while still looking decent.
         // Once this is all set up make sure to go and do the required stuff for most UI's in the ModSystem class.
 
-        // 对于这个条形图，我们将使用一个框架纹理和一个渐变内部条形图，因为它是更简单的方法之一，同时看起来还不错。
+        // 对于这个条形图，我们将使用一个框架纹理和一个渐变内部条形图，因为它是最简单的方法之一，同时看起来还不赖。
         // 设置完所有内容后，请确保在ModSystem类中执行大多数UI所需的操作。
         private UIText text;
         private UIElement area;
@@ -74,7 +74,7 @@ namespace AnalysisMod.AnalysisCommon.AnalysisUI.AnalysisResourceUI
         public override void Draw(SpriteBatch spriteBatch)
         {
             // This prevents drawing unless we are using an AnalysisCustomResourceWeapon
-            // 这样可以防止绘制除非正在使用AnalysisCustomResourceWeapon
+            // 这样可以防止绘制，除非正在使用AnalysisCustomResourceWeapon
             if (Main.LocalPlayer.HeldItem.ModItem is not AnalysisCustomResourceWeapon)
                 return;
 
@@ -88,7 +88,9 @@ namespace AnalysisMod.AnalysisCommon.AnalysisUI.AnalysisResourceUI
             base.DrawSelf(spriteBatch);
 
             var modPlayer = Main.LocalPlayer.GetModPlayer<AnalysisResourcePlayer>();
+
             // Calculate quotient
+            //计算系数
             float quotient = (float)modPlayer.AnalysisResourceCurrent / modPlayer.AnalysisResourceMax2; // Creating a quotient that represents the difference of your currentResource vs your maximumResource, resulting in a float of 0-1f.
                                                                                                         // 创建商表示当前资源与最大资源之差，并得到0-1f范围内的浮点数。
 
@@ -104,7 +106,7 @@ namespace AnalysisMod.AnalysisCommon.AnalysisUI.AnalysisResourceUI
             hitbox.Height -= 16;
 
             // Now, using this hitbox, we draw a gradient by drawing vertical lines while slowly interpolating between the 2 colors.
-            // 现在，使用此命中框，在缓慢插值两种颜色之间时通过绘制垂直线来绘制渐变。
+            // 现在，使用此碰撞框，在缓慢插值两种颜色之间时通过绘制垂直线来绘制渐变。
             int left = hitbox.Left;
             int right = hitbox.Right;
             int steps = (int)((right - left) * quotient);

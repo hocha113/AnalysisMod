@@ -41,6 +41,7 @@ namespace AnalysisMod.AnalysisContent.Projectiles
                                                                           // 在这个长矛实现中没有使用速度，但是我们使用该字段来存储长矛攻击方向。
 
             float halfDuration = duration * 0.5f;
+          
             float progress;
 
             // Here 'progress' is set to a value that goes from 0.0 to 1.0 and back during the item use animation.
@@ -56,6 +57,10 @@ namespace AnalysisMod.AnalysisContent.Projectiles
 
             // Move the projectile from the HoldoutRangeMin to the HoldoutRangeMax and back, using SmoothStep for easing the movement
             // 使用SmoothStep缓解移动将弹丸从HoldoutRangeMin移动到HoldoutRangeMax再返回
+
+            //【可以将 value1 看作起始点的位置向量，value2 看作终点的位置向量。当 amount 为 0 时，平滑插值的结果就是起始点的位置向量 value1。当 amount 为 1 时，平滑插值的结果就是终点的位置向量 value2】
+            //【而当 amount 在 0 到 1 之间时，平滑插值的结果是起始点和终点之间的一个位置向量，表示两个向量之间的平滑过渡】
+            //【可以将平滑插值想象成一个在起始点和终点之间按照插值比例 amount 进行平滑移动的点，而不是一个向量箭头在两个向量之间来回摆动】
             Projectile.Center = player.MountedCenter + Vector2.SmoothStep(Projectile.velocity * HoldoutRangeMin, Projectile.velocity * HoldoutRangeMax, progress);
 
             // Apply proper rotation to the sprite.

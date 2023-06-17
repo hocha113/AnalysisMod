@@ -35,7 +35,7 @@ namespace AnalysisMod.AnalysisCommon.Systems
         {
             if (downedMinionBoss)
             {
-                tag["downedMinionBoss"] = true;
+                tag["downedMinionBoss"] = true;//【存入标签，当Boss被击败时，tag会进行修改】
             }
 
             // if (downedOtherBoss) {
@@ -45,10 +45,11 @@ namespace AnalysisMod.AnalysisCommon.Systems
 
         public override void LoadWorldData(TagCompound tag)
         {
-            downedMinionBoss = tag.ContainsKey("downedMinionBoss");
+            downedMinionBoss = tag.ContainsKey("downedMinionBoss");//【读取标签，加载上次存入的tag_"downedMinionBoss"的值，如果你不加载，那么便是默认值】
             // downedOtherBoss = tag.ContainsKey("downedOtherBoss");
         }
 
+        //【网络同步_写入】
         public override void NetSend(BinaryWriter writer)
         {
             // Order of operations is important and has to match that of NetReceive
@@ -63,10 +64,14 @@ namespace AnalysisMod.AnalysisCommon.Systems
             请记住，Bytes / BitsByte最多只有8个条目。如果您想同步超过8个标志，请使用多个BitsByte：
 
 				This is wrong:
+            这是错误的:
+
 			flags[8] = downed9thBoss; // an index of 8 is nonsense.
-                                      // 索引为8是无意义的。
+                                      // 索引为8是无意义的【索引条目为0-7】。
 
 				This is correct:
+            这是正确的:
+
 			flags[7] = downed8thBoss;
 			writer.Write(flags);
 			BitsByte flags2 = new BitsByte(); // create another BitsByte
@@ -119,6 +124,7 @@ namespace AnalysisMod.AnalysisCommon.Systems
 			*/
         }
 
+        //【网络同步_读取】
         public override void NetReceive(BinaryReader reader)
         {
             // Order of operations is important and has to match that of NetSend

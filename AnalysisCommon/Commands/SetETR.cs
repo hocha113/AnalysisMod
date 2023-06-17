@@ -2,7 +2,7 @@
 using Terraria.ModLoader;
 using Terraria.ID;
 using Terraria.DataStructures;
-using AnalysisMod.Staitd;
+using AnalysisMod.Staitd.ProjectE_Etr;
 
 namespace AnalysisMod.AnalysisCommon.Commands
 {
@@ -23,7 +23,7 @@ namespace AnalysisMod.AnalysisCommon.Commands
 
         public override void Action(CommandCaller caller, string input, string[] args)
         {
-            MyModPlayer modPlayer = Main.LocalPlayer.GetModPlayer<MyModPlayer>();
+            EtrSyter modPlayer = Main.LocalPlayer.GetModPlayer<EtrSyter>();
 
             int GetEtr=0;
 

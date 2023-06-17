@@ -11,11 +11,9 @@ namespace AnalysisMod.AnalysisCommon.AnalysisUI.ResourceOverlay
 {
     public class VanillaLifeOverlay : ModResourceOverlay
     {
-        // This field is used to cache vanilla assets used in the CompareAssets helper method further down in this file
         // 这个字段用于缓存在文件中进一步使用CompareAssets帮助方法所需的原始资产
         private Dictionary<string, Asset<Texture2D>> vanillaAssetCache = new();
 
-        // These fields are used to cache the result of ModContent.Request<Texture2D>()
         // 这些字段用于缓存ModContent.Request<Texture2D>()的结果
         private Asset<Texture2D> heartTexture, fancyPanelTexture, barsFillingTexture, barsPanelTexture;
 

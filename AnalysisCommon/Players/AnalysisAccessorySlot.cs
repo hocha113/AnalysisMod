@@ -7,33 +7,25 @@ namespace AnalysisMod.AnalysisCommon.Players
 {
     public class AnalysisModAccessorySlot1 : ModAccessorySlot
     {
-        // If the class is empty, everything will default to a basic vanilla slot.
         // 如果类为空，则所有内容都将默认为基本香草字段值。
     }
 
     public class AnalysisCustomLocationAndTextureSlot : ModAccessorySlot
     {
-        // We will place the slot to be at the center of the map, making the decision not to follow the internal UI handling
         // 我们将把插槽放在地图中心，决定不遵循内部UI处理
         public override Vector2? CustomLocation => new Vector2(Main.screenWidth / 2, 3 * Main.screenHeight / 4);
 
-        // We will draw the vanity slot when there's a dye
         // 当有染料时，我们会绘制装饰插槽
         public override bool DrawVanitySlot => !DyeItem.IsAir;
-
-        //     We will use our 'custom' textures
-        // Background Textures -> In general, you can use most of the existing vanilla ones to get different colours
 
         // 我们将使用自定义纹理
         // 背景纹理->通常情况下，您可以使用大多数现有的香草来获得不同的颜色
         public override string VanityBackgroundTexture => "Terraria/Images/Inventory_Back14"; // yellow
         public override string FunctionalBackgroundTexture => "Terraria/Images/Inventory_Back7"; // pale blue
 
-        // Icon textures. Nominal image size is 32x32. Piggy bank is 16x24 but it still works as it's drawn centered.
         // 图标纹理。名义上的图像大小为32x32。小猪储钱罐是16x24，但它仍然可以正常工作，因为它被居中绘制。
         public override string VanityTexture => "Terraria/Images/Item_" + ItemID.PiggyBank;
 
-        // We will keep it hidden most of the time so that it isn't an intrusive Analysis
         // 大多数时间我们会保持隐藏状态，以免过于突兀分析
         public override bool IsHidden()
         {

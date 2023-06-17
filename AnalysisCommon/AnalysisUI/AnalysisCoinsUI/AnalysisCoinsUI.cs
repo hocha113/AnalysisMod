@@ -19,7 +19,7 @@ namespace AnalysisMod.AnalysisCommon.AnalysisUI.AnalysisCoinsUI
 
     // 通过在聊天中输入“/Anslysis_coins”来切换AnalysisUI的可见性（请参阅AnalysisCoinCommand.cs）
     // AnalysisCoinsUI是一个简单的UI分析，展示了如何使用UIPanel、UIImageButton甚至自定义的UIElement
-    // 关于UI更多信息，请查看https://github.com/tModLoader/tModLoader/wiki/Basic-UI-Element和https://github.com/tModLoader/tModLoader/wiki/Advanced-guide-to-custom-UI
+    // 关于UI更多信息，请查看 https://github.com/tModLoader/tModLoader/wiki/Basic-UI-Element和 https://github.com/tModLoader/tModLoader/wiki/Advanced-guide-to-custom-UI
     internal class AnalysisCoinsUIState : UIState
     {
         public AnalysisDragableUIPanel CoinCounterPanel;

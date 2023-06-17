@@ -2,6 +2,7 @@ using AnalysisMod.AnalysisContent.Projectiles;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
+using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
@@ -83,7 +84,7 @@ namespace AnalysisMod.AnalysisContent.Items.Weapons
         // 此方法允许您调整玩家手中枪械的位置。根据您的图形进行调整，直到看起来很好。
         public override Vector2? HoldoutOffset()
         {
-            return new Vector2(12f, 2f);
+            return new Vector2(0f, -1f);
         }
 
         //TODO: Move this to a more specifically named Analysis. Say, a paint gun?
@@ -96,6 +97,16 @@ namespace AnalysisMod.AnalysisContent.Items.Weapons
             {
                 type = ModContent.ProjectileType<AnalysisInstancedProjectile>();
             }
+        }
+
+        /*让子弹顺时针旋转45度
+        public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
+        {
+            float rotation = MathHelper.ToRadians(45);
+            Vector2 perturbedSpeed = velocity.RotatedBy(rotation);
+            Projectile.NewProjectile(source, position, perturbedSpeed, type, damage, knockback, player.whoAmI);
+            return false; // return false to stop vanilla from calling Projectile.NewProjectile.
+                          // 返回false以阻止vanilla调用Projectile.NewProjectile。
         }
 
         /*
