@@ -108,5 +108,6 @@ namespace AnalysisMod.AdditionalAnalysis
         {
             return (vector2 - vector1).ToRotation();
         }
+        //阅读AnalysisContent\Projectiles\Minions\AnalysisSimpleMinion 的Ai代码部分是学习移动代码和碰撞模拟的好办法
     }
 }
