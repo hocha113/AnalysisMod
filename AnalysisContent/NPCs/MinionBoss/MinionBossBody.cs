@@ -460,9 +460,6 @@ namespace AnalysisMod.AnalysisContent.NPCs.MinionBoss
 
             if (Main.netMode == NetmodeID.MultiplayerClient)
             {
-                // Because we want to spawn minions, and minions are NPCs, we have to do this on the server (or singleplayer, "!= NetmodeID.MultiplayerClient" covers both)
-                // This means we also have to sync it after we spawned and set up the minion
-
                 // 因为我们想要生成小兵，并且小兵是NPCs，所以我们必须在服务器端进行操作（或单人游戏，“！= NetmodeID.MultiplayerClient”覆盖两者）
                 //这意味着我们还需要在生成和设置小兵之后同步它。
                 return;
@@ -470,23 +467,18 @@ namespace AnalysisMod.AnalysisContent.NPCs.MinionBoss
 
             int count = MinionCount();
             var entitySource = NPC.GetSource_FromAI();
-
+            
             MinionMaxHealthTotal = 0;
             for (int i = 0; i < count; i++)
             {
                 NPC minionNPC = NPC.NewNPCDirect(entitySource, (int)NPC.Center.X, (int)NPC.Center.Y, ModContent.NPCType<MinionBossMinion>(), NPC.whoAmI);
                 if (minionNPC.whoAmI == Main.maxNPCs)
-                    continue; // spawn failed due to spawn cap
-                              // 由于出生限制而导致生成失败
-
-                // Now that the minion is spawned, we need to prepare it with data that is necessary for it to work
-                // This is not required usually if you simply spawn NPCs, but because the minion is tied to the body, we need to pass this information to it
+                    continue; // 由于出生限制而导致生成失败
 
                 // 现在小兵被召唤出来了，我们需要准备数据以便其正常工作
                 //如果您只是简单地产生NPC，则通常不需要此操作，但是因为小兵与身体绑定，所以我们需要将此信息传递给它。
                 MinionBossMinion minion = (MinionBossMinion)minionNPC.ModNPC;
-                minion.ParentIndex = NPC.whoAmI; // Let the minion know who the "parent" is
-                                                 // 让小兵知道“父母”是谁
+                minion.ParentIndex = NPC.whoAmI; // 让小兵知道“父母”是谁
 
                 minion.PositionOffset = i / (float)count; // Give it a separate position offset
                                                           // 给它一个单独的位置偏移量
@@ -502,7 +494,6 @@ namespace AnalysisMod.AnalysisContent.NPCs.MinionBoss
                 }
             }
 
-            // sync MinionMaxHealthTotal
             // 同步MinionMaxHealthTotal
             if (Main.netMode == NetmodeID.Server)
             {
@@ -514,7 +505,6 @@ namespace AnalysisMod.AnalysisContent.NPCs.MinionBoss
         {
             if (SecondStage)
             {
-                // No point checking if the NPC is already in its second stage
                 // 没有必要检查NPC是否已经处于第二阶段
                 return;
             }
@@ -534,13 +524,9 @@ namespace AnalysisMod.AnalysisContent.NPCs.MinionBoss
 
             if (MinionHealthTotal <= 0 && Main.netMode != NetmodeID.MultiplayerClient)
             {
-                // If we have no shields (aka "no minions alive"), we initiate the second stage, and notify other players that this NPC has reached its second stage
-                // by setting NPC.netUpdate to true in this tick. It will send important data like position, velocity and the NPC.ai[] array to all connected clients
-
                 // 如果我们没有护盾（也就是“没有活着的小兵”），则启动第二阶段，并在这个tick中将 NPC.netUpdate设置为true 通知其他玩家该NPC已达到其第二阶段
                 //通过设置 NPC.ai []数组来发送重要数据如位置、速度和。连接到所有客户端。
 
-                // Because SecondStage is a property using NPC.ai[], it will get synced this way
                 // 因为SecondStage 是使用 NPC.ai[]属性, 所以会被同步.
                 SecondStage = true;
                 NPC.netUpdate = true;
@@ -549,9 +535,6 @@ namespace AnalysisMod.AnalysisContent.NPCs.MinionBoss
 
         private void DoFirstStage(Player player)
         {
-            // Each time the timer is 0, pick a random position a fixed distance away from the player but towards the opposite side
-            // The NPC moves directly towards it with fixed speed, while displaying its trajectory as a telegraph
-
             // 每次计时器归零时, 都从固定距离内随机选择一个位置并朝相反方向移动。
             // NPC直接向其移动，并显示其轨迹作为预判线
 
@@ -570,9 +553,6 @@ namespace AnalysisMod.AnalysisContent.NPCs.MinionBoss
 
                 if (Main.netMode != NetmodeID.MultiplayerClient)
                 {
-                    // Important multiplayer concideration: drastic change in behavior (that is also decided by randomness) like this requires
-                    // to be executed on the server (or singleplayer) to keep the boss in sync
-
                     // 重要的多人游戏考虑：这种行为上的 drastical 变化（也由随机性决定）
                     // 需要在服务器（或单人游戏）上执行，以保持 boss 的同步。
 
@@ -609,9 +589,6 @@ namespace AnalysisMod.AnalysisContent.NPCs.MinionBoss
                 // 如果目标改变了
                 NPC.TargetClosest(); // Pick the closest player target again
                                      // 再次选择最近的玩家目标
-
-                // "Why is this not in the same code that sets FirstStageDestination?" Because in multiplayer it's ran by the server.
-                // The client has to know when the destination changes a different way. Keeping track of the previous ticks' destination is one way
 
                 // “为什么不与设置 FirstStageDestination 的代码相同？”因为在多人游戏中，它是由服务器运行的。
                 // 客户端必须知道当目标以不同方式更改时。跟踪前一个刻度的目标是一种方法。
