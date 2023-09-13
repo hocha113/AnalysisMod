@@ -120,8 +120,7 @@ namespace AnalysisMod.AnalysisContent.NPCs
         {
             NPCID.Sets.NPCBestiaryDrawModifiers value = new NPCID.Sets.NPCBestiaryDrawModifiers(0)
             {
-                Hide = true // Hides this NPC from the Bestiary, useful for multi-part NPCs whom you only want one entry.
-                            // 隐藏此NPC使其不出现在图鉴中，适用于由多个部分组成的NPC，您只想要一个条目的情况。
+                Hide = true // 隐藏此NPC使其不出现在图鉴中，适用于由多个部分组成的NPC，您只想要一个条目的情况。
             };
             NPCID.Sets.NPCBestiaryDrawOffset.Add(NPC.type, value);
         }

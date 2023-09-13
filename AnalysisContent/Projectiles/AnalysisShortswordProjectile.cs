@@ -64,50 +64,37 @@ namespace AnalysisMod.AnalysisContent.Projectiles
             Timer += 1;
             if (Timer >= TotalDuration)
             {
-                // Kill the projectile if it reaches it's intented lifetime
                 // 如果达到预定寿命，则杀死该投射物
                 Projectile.Kill();
                 return;
             }
             else
             {
-                // Important so that the sprite draws "in" the player's hand and not fully infront or behind the player
                 // 非常重要，以便精灵图“描绘”在玩家手中，并且不完全出现在玩家前面或后面。
                 player.heldProj = Projectile.whoAmI;
             }
-
-            // Fade in and out
-            // GetLerpValue returns a value between 0f and 1f - if clamped is true - representing how far Timer got along the "distance" defined by the first two parameters
-            // The first call handles the fade in, the second one the fade out.
-            // Notice the second call's parameters are swapped, this means the result will be reverted
-
             // 渐入渐出
             // GetLerpValue 返回一个值在 0f 和 1f 之间 - 如果 clamped 是 true - 表示 Timer 沿着由前两个参数定义的“距离”走了多远
             // 第一次调用处理淡入，第二次调用处理淡出。
             // 注意第二个调用的参数已交换，这意味着结果将被反转
             Projectile.Opacity = Utils.GetLerpValue(0f, FadeInDuration, Timer, clamped: true) * Utils.GetLerpValue(TotalDuration, TotalDuration - FadeOutDuration, Timer, clamped: true);
 
-            // Keep locked onto the player, but extend further based on the given velocity (Requires ShouldUpdatePosition returning false to work)
             // 锁定到玩家，但根据给定速度进一步延伸（需要 ShouldUpdatePosition 返回 false 才能工作）
             Vector2 playerCenter = player.RotatedRelativePoint(player.MountedCenter, reverseRotation: false, addGfxOffY: false);
             Projectile.Center = playerCenter + Projectile.velocity * (Timer - 1f);
 
-            // Set spriteDirection based on moving left or right. Left -1, right 1
             // 根据向左或向右移动设置 spriteDirection。左-1、右1
             Projectile.spriteDirection = (Vector2.Dot(Projectile.velocity, Vector2.UnitX) >= 0f).ToDirectionInt();
 
-            // Point towards where it is moving, applied offset for top right of the sprite respecting spriteDirection
             // 指向其移动方向，并应用偏移以尊重 spriteDirection 的精灵图顶部右侧
             Projectile.rotation = Projectile.velocity.ToRotation() + MathHelper.PiOver2 - MathHelper.PiOver4 * Projectile.spriteDirection;
 
-            // The code in this method is important to align the sprite with the hitbox how we want it to
             // 此方法中的代码对于使精灵图与命中框按我们想要的方式对齐非常重要
             SetVisualOffsets();
         }
 
         private void SetVisualOffsets()
         {
-            // 32 is the sprite size (here both width and height equal)
             // 32是精灵图大小（宽度和高度相等）
             const int HalfSpriteWidth = 32 / 2;
             const int HalfSpriteHeight = 32 / 2;
@@ -115,7 +102,6 @@ namespace AnalysisMod.AnalysisContent.Projectiles
             int HalfProjWidth = Projectile.width / 2;
             int HalfProjHeight = Projectile.height / 2;
 
-            // Vanilla configuration for "hitbox in middle of sprite"
             //“碰撞框在精灵图中间”的原始配置
             DrawOriginOffsetX = 0;
             DrawOffsetX = -(HalfSpriteWidth - HalfProjWidth);
@@ -138,14 +124,12 @@ namespace AnalysisMod.AnalysisContent.Projectiles
 
         public override bool ShouldUpdatePosition()
         {
-            // Update Projectile.Center manually
             // 手动更新Projectile.Center
             return false;
         }
 
         public override void CutTiles()
         {
-            // "cutting tiles" refers to breaking pots, grass, queen bee larva, etc.
             // “切割图块”指的是打破罐子、草、蜜王幼虫等。
             DelegateMethods.tilecut_0 = TileCuttingContext.AttackProjectile;
             Vector2 start = Projectile.Center;
@@ -155,9 +139,6 @@ namespace AnalysisMod.AnalysisContent.Projectiles
 
         public override bool? Colliding(Rectangle projHitbox, Rectangle targetHitbox)
         {
-            // "Hit anything between the player and the tip of the sword"
-            // shootSpeed is 2.1f for reference, so this is basically plotting 12 pixels ahead from the center
-
             //“击中玩家和剑尖之间的任何东西”
             // shootSpeed为2.1f，因此基本上从中心向前绘制12个像素
             Vector2 start = Projectile.Center;

@@ -8,25 +8,17 @@ using Terraria.WorldBuilding;
 
 namespace AnalysisMod.AnalysisCommon.Systems
 {
-    // This ModSystem will demonstrate how to IL edit and Detour world generation passes
-    // Since world generation passes are anonymous methods (they don't have a name), they can't be edited the standard way (using IL_xx or On_xx)
-
     // 这个ModSystem将演示如何编辑和重定向世界生成过程
     // 由于世界生成过程是匿名方法（它们没有名称），因此无法使用标准方式进行编辑（使用IL_xx或On_xx）
     public class AnalysisWorldGenHookingSystem : ModSystem
     {
-        // All of the registration should take place in load
-        // Generation pass hooks are unloaded manually, so no Unload method is needed
-
         // 所有注册都应在加载时进行
         // 生成通行证挂钩需要手动卸载，因此不需要Unload方法
         public override void Load()
         {
-            // IL editing the pyramids pass
             // 编辑金字塔通行证的IL(【决定你的世界是否生成金字塔-译者注】)
             WorldGen.ModifyPass((PassLegacy)WorldGen.VanillaGenPasses["Pyramids"], Modify_Pyramids);
 
-            // Detouring the shinies pass (generates ore)
             // 重定向闪亮的通行证（生成矿物）
             WorldGen.DetourPass((PassLegacy)WorldGen.VanillaGenPasses["Shinies"], Detour_Shinies);
         }
@@ -43,10 +35,6 @@ namespace AnalysisMod.AnalysisCommon.Systems
                 MonoModHooks.DumpIL(ModContent.GetInstance<AnalysisMod>(), il);
             }
         }
-
-        // Detouring should be the same (except for one thing mentioned below), this is just an Analysis so you can check this is actually working
-        // One thing to note is that for techincal reasons, the self parameter is an object type
-        // You will never need to actually cast it to type WorldGen though, since it contains no instance fields or methods
 
         // 重定向应该相同（除了下面提到的一件事），这只是一个分析，以便您可以检查是否实际起作用
         // 需要注意的一件事是出于技术原因，self参数是对象类型

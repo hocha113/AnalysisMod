@@ -9,17 +9,12 @@ namespace AnalysisMod.AnalysisContent.Items
     {
         public override void SetStaticDefaults()
         {
-            // Must be researched as many times as there are items in the game.
-            // If fully researched, and a new mod is added, it will become un-researched and require that much more
-            // Research amount will never go down or over the max limit of 9999.
-
             // 必须研究与游戏中的物品数量相同次数。
             // 如果完全研究，并添加了新的模组，则会变为未研究状态并需要更多时间进行研究
             // 研究量永远不会降低或超过最大限制9999。
             Item.ResearchUnlockCount = Utils.Clamp(ItemLoader.ItemCount, 1, 9999);
 
-            // Use a MonoMod hook to allow our presents to run through the Sacrifice system.
-            // 使用MonoMod钩子允许我们的礼物通过牺牲系统运行。
+            // 使用MonoMod钩子允许我们的掉落物通过掉落物系统运行。
             On_CreativeUI.SacrificeItem_refItem_refInt32_bool += OnSacrificeItem;
         }
 
@@ -28,29 +23,22 @@ namespace AnalysisMod.AnalysisContent.Items
             Item.CloneDefaults(ItemID.GoodieBag);
         }
 
-        // This allows for the present to be researched even when you already have infinite of them.
-        // This is not a standard use of the research system, but allows for re-running a 'research complete' effect
-
         // 即使您已经拥有无限个，这也可以使礼物被研究。
         // 这不是研究系统的标准用法，但允许重新运行“完成研究”的效果
         private CreativeUI.ItemSacrificeResult OnSacrificeItem(On_CreativeUI.orig_SacrificeItem_refItem_refInt32_bool orig,
                 ref Item item, out int amountWeSacrificed, bool returnRemainderToPlayer)
         {
 
-            // If the item being sacrificed has the same type as us (is an AnalysisResearchPresent) and is fully researched
             // 如果被牺牲的物品与我们具有相同类型（即AnalysisResearchPresent）且已完全研究
             if (item.type == Type && CreativeUI.GetSacrificesRemaining(Type) == 0)
             {
 
-                // Re-unlock all accessories, incase mods have changed
                 // 重新解锁所有配件，以防万一修改了模组
                 OnResearched(true);
 
-                // We always lose a present when researching them, even if you already had infinite of them. To show the user something happened
                 // 我们总是在进行礼物研究时失去一个礼物，即使您已经拥有无限个。为向用户显示发生了某些事情
                 item.stack -= 1;
 
-                // This code is copied from the end of SacrificeItem
                 // 这段代码是从SacrificeItem的结尾复制而来
                 if (item.stack > 0 && returnRemainderToPlayer)
                 {
@@ -59,16 +47,13 @@ namespace AnalysisMod.AnalysisContent.Items
                     item = Main.LocalPlayer.GetItem(Main.myPlayer, item, GetItemSettings.InventoryUIToInventorySettings);
                 }
 
-                // This is the amount the sacrifice counter goes up by. We didn't actually change the total number of sacrifices, so this is 0
                 // 这是祭品计数器增加的数量。实际上我们没有改变总祭品数量，所以这里是0.
                 amountWeSacrificed = 0;
 
-                // Return SacrifiedAndDone, so the animation and effects happen
                 // 返回SacrifiedAndDone, 以便动画和效果发生
                 return CreativeUI.ItemSacrificeResult.SacrificedAndDone;
             }
 
-            // Otherwise, call the original method to run the default behaviour
             // 否则，请调用原始方法来运行默认行为
             return orig(ref item, out amountWeSacrificed, returnRemainderToPlayer);
         }
@@ -81,7 +66,7 @@ namespace AnalysisMod.AnalysisContent.Items
             }
             else
             {
-                // Attempt to learn a random accessory for each present sacrificed
+
                 // 尝试学习每个被牺牲者随机配件
                 int count = 0;
                 for (int j = Item.stack; j > 0; j--)
@@ -102,7 +87,6 @@ namespace AnalysisMod.AnalysisContent.Items
             }
         }
 
-        // try 1000 random item ids and if we randomly select an accessory, attempt learn it
         // 尝试1000个随机物品ID，如果我们随机选择了一个配件，则尝试学习它
         private bool LearnRandomAccessory()
         {

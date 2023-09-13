@@ -17,13 +17,6 @@ namespace AnalysisMod.AnalysisCommon.Configs.CustomDataTypes
     //使得整个过程更加灵活和可控。此外，TypeConverter还可以用于在属性窗格中编辑和显示对象属性时进行转换。
     public class ClassUsedAsKey
 	{
-        // When you save data from a dictionary into a file (json), you need to represent the key as a string
-        // But to get the object back, you need a TypeConverter, and this Analysis shows how to implement one
-
-        // You start with the [TypeConverter(typeof(ToFromStringConverter<NameOfClassHere>))] attribute above the class
-        // For this to work, you need the usual Equals and GetHashCode overrides as explained in the other Analysiss,
-        // plus ToString and FromString, which are used to transform your object into a string and back
-
         // 当你将字典中的数据保存到文件（json）中时，需要将键表示为字符串
         // 但是要获取对象，则需要一个TypeConverter，本分析展示了如何实现
 

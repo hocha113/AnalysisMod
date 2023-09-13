@@ -5,8 +5,6 @@ namespace AnalysisMod.AnalysisCommon.Configs
 {
 	public class AnalysisModConfig : ModConfig
 	{
-        // ConfigScope.ClientSide should be used for client side, usually visual or audio tweaks.
-        // ConfigScope.ServerSide should be used for basically everything else, including disabling items or changing NPC behaviours
         // ConfigScope.ClientSide 通常用于客户端，例如视觉或音频调整。
         // ConfigScope.ServerSide 应该用于基本上所有其他事情，包括禁用物品或更改 NPC 行为
         public override ConfigScope Mode => ConfigScope.ServerSide;

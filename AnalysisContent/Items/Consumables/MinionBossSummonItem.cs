@@ -211,7 +211,7 @@ namespace AnalysisMod.AnalysisContent.Items.Consumables
 
         public override bool? UseItem(Player player)
         {
-            //bool playerDefeatedSkeletron = NPC.downedBoss2; // 判定玩家是否击败了骷髅王
+            bool playerDefeatedSkeletron = NPC.downedBoss2; // 判定玩家是否击败了骷髅王
             //bool playerInDungeon = Main.LocalPlayer.ZoneDungeon; // 判定玩家是否在地牢环境
 
             if (player.whoAmI == Main.myPlayer)
