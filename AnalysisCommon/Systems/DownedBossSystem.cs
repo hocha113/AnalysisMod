@@ -5,15 +5,11 @@ using Terraria.ModLoader.IO;
 
 namespace AnalysisMod.AnalysisCommon.Systems
 {
-    // Acts as a container for "downed boss" flags.
-    // Set a flag like this in your bosses OnKill hook:
-
     // 用于容纳“已击败的Boss”标志。
     // 在你的Boss OnKill钩子中设置一个标志，如下所示：
 
     //    NPC.SetEventFlagCleared(ref DownedBossSystem.downedMinionBoss, -1);
 
-    // Saving and loading these flags requires TagCompounds, a guide exists on the wiki: https://github.com/tModLoader/tModLoader/wiki/Saving-and-loading-using-TagCompound
     // 保存和加载这些标志需要使用TagCompounds，有一份指南可以在维基上找到：https://github.com/tModLoader/tModLoader/wiki/Saving-and-loading-using-TagCompound
     public class DownedBossSystem : ModSystem
     {
@@ -25,9 +21,6 @@ namespace AnalysisMod.AnalysisCommon.Systems
             downedMinionBoss = false;
             // downedOtherBoss = false;
         }
-
-        // We save our data sets using TagCompounds.
-        // NOTE: The tag instance provided here is always empty by default.
 
         //我们使用TagCompounds保存数据集。
         //注意：此处提供的标签实例默认为空。
@@ -52,7 +45,6 @@ namespace AnalysisMod.AnalysisCommon.Systems
         //【网络同步_写入】
         public override void NetSend(BinaryWriter writer)
         {
-            // Order of operations is important and has to match that of NetReceive
             //操作顺序很重要，必须与NetReceive的操作顺序相匹配
             var flags = new BitsByte();
             flags[0] = downedMinionBoss;
@@ -60,39 +52,28 @@ namespace AnalysisMod.AnalysisCommon.Systems
             writer.Write(flags);
 
             /*
-			Remember that Bytes/BitsByte only have up to 8 entries. If you have more than 8 flags you want to sync, use multiple BitsByte:
             请记住，Bytes / BitsByte最多只有8个条目。如果您想同步超过8个标志，请使用多个BitsByte：
 
-				This is wrong:
             这是错误的:
 
-			flags[8] = downed9thBoss; // an index of 8 is nonsense.
-                                      // 索引为8是无意义的【索引条目为0-7】。
+			flags[8] = downed9thBoss; // 索引为8是无意义的【索引条目为0-7】。
 
-				This is correct:
             这是正确的:
 
 			flags[7] = downed8thBoss;
 			writer.Write(flags);
-			BitsByte flags2 = new BitsByte(); // create another BitsByte
-                                              // 创建另一个BitsByte
+			BitsByte flags2 = new BitsByte(); // 创建另一个BitsByte
 
-			flags2[0] = downed9thBoss; // start again from 0
-                                       // 从0开始再次
+			flags2[0] = downed9thBoss; // 从0开始再次
 
 			// up to 7 more flags here
-			writer.Write(flags2); // write this byte
-                                  // 写入这个字节
+			writer.Write(flags2); // 写入这个字节
 			*/
 
-            // If you prefer, you can use the BitsByte constructor approach as well.
             //如果您愿意，也可以使用BitsByte构造函数方法。
 
             // BitsByte flags = new BitsByte(downedMinionBoss, downedOtherBoss);
             // writer.Write(flags);
-
-            // This is another way to do the same thing, but with bitmasks and the bitwise OR assignment operator (the |=)
-            // Note that 1 and 2 here are bit masks. The next values in the pattern are 4,8,16,32,64,128. If you require more than 8 flags, make another byte.
 
             //这是另一种用位掩码和按位或赋值运算符（| =）完成相同事情的方法
             //请注意，这里的1和2是位掩码。模式中下一个值为4,8,16,32,64,128。如果需要更多于8个标志，请再建立一个字节。
@@ -108,7 +89,6 @@ namespace AnalysisMod.AnalysisCommon.Systems
             // }
             // writer.Write(flags);
 
-            // If you plan on having more than 8 of these flags and don't want to use multiple BitsByte, an alternative is using a System.Collections.BitArray
             //如果您计划拥有超过8个这些标志，并且不想使用多个BitsByte，则替代方案是使用System.Collections.BitArray
             /*
 			bool[] flags = new bool[] {

@@ -74,23 +74,14 @@ namespace AnalysisMod.AnalysisContent.Tiles
 
         protected override void ApplyPass(GenerationProgress progress, GameConfiguration configuration)
         {
-            // progress.Message is the message shown to the user while the following code is running.
-            // Try to make your message clear. You can be a little bit clever, but make sure it is descriptive enough for troubleshooting purposes.
-
             // progress.Message 是运行以下代码时向用户显示的消息。
             // 尽量使您的消息清晰易懂。可以稍微聪明一点，但请确保它对故障排除有足够描述性。
             progress.Message = "Analysis Mod Ores";
-
-            // Ores are quite simple, we simply use a for loop and the WorldGen.TileRunner to place splotches of the specified Tile in the world.
-            // "6E-05" is "scientific notation". It simply means 0.00006 but in some ways is easier to read.
 
             // 矿物很简单，我们只需使用 for 循环和 WorldGen.TileRunner 在世界中放置指定 Tile 的斑块即可。
             // “6E-05”是科学计数法。它表示 0.00006，但在某些方面更易于阅读。
             for (int k = 0; k < (int)(Main.maxTilesX * Main.maxTilesY * 6E-05); k++)
             {
-                // The inside of this for loop corresponds to one single splotch of our Ore.
-                // First, we randomly choose any coordinate in the world by choosing a random x and y value.
-
                 // 此 for 循环的内部对应于我们矿物的一个斑块。
                 // 首先，我们通过选择随机 x 和 y 值来随机选择世界中的任何坐标。
                 int x = WorldGen.genRand.Next(0, Main.maxTilesX);
@@ -100,18 +91,9 @@ namespace AnalysisMod.AnalysisContent.Tiles
 
                 int y = WorldGen.genRand.Next((int)GenVars.worldSurfaceLow, Main.maxTilesY);
 
-                // Then, we call WorldGen.TileRunner with random "strength" and random "steps", as well as the Tile we wish to place.
-                // Feel free to experiment with strength and step to see the shape they generate.
-
                 // 然后，我们调用具有随机“强度”和随机“步骤”的 WorldGen.TileRunner，并指定要放置的 Tile。
                 // 可以尝试不同的 strength 和 step 来查看它们生成的形状。
                 WorldGen.TileRunner(x, y, WorldGen.genRand.Next(3, 6), WorldGen.genRand.Next(2, 6), ModContent.TileType<AnalysisOre>());
-
-                // Alternately, we could check the tile already present in the coordinate we are interested.
-                // Wrapping WorldGen.TileRunner in the following condition would make the ore only generate in Snow.
-                // Tile tile = Framing.GetTileSafely(x, y);
-                // if (tile.HasTile && tile.TileType == TileID.SnowBlock) {
-                // 	WorldGen.TileRunner(.....);
 
                 // 或者，我们可以检查感兴趣坐标处已经存在的 Tile。
                 // 将 WorldGen.TileRunner 包装在以下条件中将使该矿物仅在雪地中生成。

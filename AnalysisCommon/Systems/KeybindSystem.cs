@@ -2,9 +2,6 @@
 
 namespace AnalysisMod.AnalysisCommon.Systems
 {
-    // Acts as a container for keybinds registered by this mod.
-    // See Common/Players/AnalysisKeybindPlayer for usage.
-
     // 作为此模组注册的按键绑定的容器。
     // 有关使用方法，请参见 Common/Players/AnalysisKeybindPlayer。
     public class KeybindSystem : ModSystem
@@ -21,11 +18,9 @@ namespace AnalysisMod.AnalysisCommon.Systems
             RandomBuffKeybind = KeybindLoader.RegisterKeybind(Mod, "RandomBuff", "P");
         }
 
-        // Please see AnalysisMod.cs' Unload() method for a detailed explanation of the unloading process.
         // 请参阅 AnalysisMod.cs 的 Unload() 方法，以获取卸载过程的详细说明。
         public override void Unload()
         {
-            // Not required if your AssemblyLoadContext is unloading properly, but nulling out static fields can help you figure out what's keeping it loaded.
             // 如果您的 AssemblyLoadContext 正确卸载，则不需要此操作，但将静态字段置空可以帮助您找出是什么使其保持加载状态。
             RandomBuffKeybind = null;
         }

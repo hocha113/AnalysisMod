@@ -6,22 +6,12 @@ using Terraria.ModLoader;
 using Terraria.ModLoader.IO;
 
 /// <summary>
-/// This Analysis illustrates a solution for storing Small-Sparse-Simple data at locations. The definitions of those are as follows:
-/// Small/Large - < 10 locations are actively using the data per frame is small, > 10 is large. Use UNRELEASEDSYSTEM1 to do large-X-simple data.
-/// Sparse/Filled - Sparse is that not all locations will have data, typically less than 60% in the world will have data. Use UNRELEASEDSYSTEM1 to do large-X-simple data.
-/// Simple/Complex - Sorta arbitrary. Simple data will not contain methods, nor complicated functionality, and typically is just basic data types. Use TileEntities if working with complex data.
 /// 这个分析展示了一种在位置上存储小型稀疏简单数据的解决方案。它们的定义如下：
 /// - 小/大 - 每帧使用该数据的位置少于10个为小，多于10个为大。对于大X简单数据，请使用UNRELEASEDSYSTEM1。
 /// - 稀疏/填充 - 稀疏表示不是所有位置都有数据，通常世界中不到60%的位置会有数据。对于大X简单数据，请使用UNRELEASEDSYSTEM1。
 /// - 简单/复杂 - 有点难以区分。简单的数据不包含方法或复杂功能，并且通常只是基本类型的数据。如果处理复杂数据，请使用TileEntities。
 /// </summary>
 
-///			Some other common use cases not Analysisd:
-/// Getting data for a particular tile type your mod added, that was placed in world:
-///		Trigger fetch of data using adjTiles[type]. If data is ordered, use appropriate version of PosData.Lookup. If data is not ordered, you will likely need to find via enumeration.
-///		If it is unordered additions, you may elect to build myMap yourself OR attempt to insert the data so it remains ordered. The latter will lead to better post-event performance.
-///	Clustering data to achieve sparsity:
-///		If your application has multiple repeat static data in a row, you should elect to use Clustered mode in the builder to compress it. Note that you should NOT use PosData.LookupExact in this case.
 ///		    还有其他一些常见用例未被分析：
 /// - 获取你添加到游戏中特定方块类型的信息：触发adjTiles[type]来获取信息。如果信息已排序，则使用适当版本的PosData.Lookup；如果没有排序，则可能需要通过枚举查找。
 ///     - 聚类以实现稀疏性：如果应用程序中存在多个重复静态连续数据，则应选择在构建器中使用聚类模式进行压缩。请注意，在这种情况下，您不应该使用PosData.LookupExact。
